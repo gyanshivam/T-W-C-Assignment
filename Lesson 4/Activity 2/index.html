@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-<html>
- <head>
-   <title>Simple Web Page</title>
-   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
- </head>
-  <body>
-   <h1>
-    Hi this is just a simple web page
-   </h1>
-   <p>
-    I am just filling in something for the intended purpose.<br>
-    This should come later but its good to do things first
-    <!-- Actually this finishes everything -->
-   </p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aquatic Beats Party | Underwater Rave</title>
+</head>
+<body>
+
+<center>
+  <!-- Header with original ocean party theme -->
+  <h1> Aquatic Beats Party </h1>
+  <h3>Dive into the rhythm of the deep blue sea</h3>
+
+  <p> Crank up the volume and let the coral reef vibes take over. The jellyfish are grooving, and the seahorses are swaying!</p>
+
+  <!-- Audio section: ocean wave synth track (different source) -->
+  <audio controls loop autoplay>
+    <source src="SoundOfSea.wav" type="audio/wav">
+    
+    Your browser does not support the audio element. Please upgrade to enjoy the beats.
+  </audio>
+
+  <br><br>
+
+  <!-- Video section: tropical fish aquarium footage with custom poster -->
+  <video width="560" height="315" controls loop muted poster="videoframe_2195.png" preload="metadata" autoplay muted>
+    <source src="Underwater video.mp4" type="video/mp4">
+    <track kind="captions" label="English" srclang="en" default>
+    Your browser does not support the video tag. Time to upgrade!
+  </video>
+
+  <h2> The ocean floor is now a dance floor! </h2>
+  <p>This page combines an infinite‑loop audio track (MP3/OGG) with a looping underwater‑themed video, complete with a custom poster image, playback controls, and even a closed caption track. The party never stops under the sea!</p>
+  <footer> Made with &lt;audio&gt; and &lt;video&gt; tags – no external styles, just pure HTML5 magic </footer>
+</center>
+
+</body>
 </html>
