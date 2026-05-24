@@ -2,7 +2,7 @@ body{
  width: 100%;
  height: 100%;
  background-color: lightgrey;
- color:rgb(29, 7, 48);
+ color: rgb(29, 7, 48);
  font-family: "Lucida Console", "Courier New", monospace;
 }
 h1, h3{
