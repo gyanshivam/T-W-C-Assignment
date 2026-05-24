@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details Form | Register Now</title>
+</head>
+<body>
+
+<h1> Personal Details Form</h1>
+<p>Please fill in your information below. All fields are required unless noted.</p>
+
+<form action="#" method="post">
+    <!-- Full Name (text) -->
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" placeholder="e.g., Gyan Abhijeet" required><br><br>
+
+    <!-- Email Address (email type) -->
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" placeholder="gyan@gmail.com" required><br><br>
+
+    <!-- Masked Contact Number (using password type to hide digits) -->
+    <label for="contact">Contact Number (masked):</label><br>
+    <input type="password" id="contact" name="contact" placeholder="••••••••••" required><br>
+    <small>Your input will be hidden while typing for privacy.</small><br><br>
+
+    <!-- Gender (radio buttons, mutually exclusive) -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other / Prefer not to say</label><br><br>
+
+    <!-- Favourite City (multiple checkboxes) -->
+    <label>Cities that you like (you can select more than one):</label><br>
+    <input type="checkbox" id="city_bengaluru" name="favourite_cities" value="Bengaluru">
+    <label for="city_bengaluru">Bengaluru</label><br>
+    <input type="checkbox" id="city_mumbai" name="favourite_cities" value="Mumbai">
+    <label for="city_mumbai">Mumbai</label><br>
+    <input type="checkbox" id="city_kolkata" name="favourite_cities" value="Kolkata">
+    <label for="city_kolkata">Kolkata</label><br>
+    <input type="checkbox" id="city_chennai" name="favourite_cities" value="Chennai">
+    <label for="city_chennai">Chennai</label><br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit Details">
+    <input type="reset" value="Clear Form">
+</form>
+
+</body>
+</html>

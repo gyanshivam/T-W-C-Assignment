@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Horizons | Semantic HTML Demo</title>
+</head>
+<body>
+
+<!-- HEADER: site branding and main navigation -->
+<header>
+    <h1> Cosmic Horizons</h1>
+    <p>Exploring the universe, one semantic tag at a time</p>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#missions">Missions</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- MAIN: primary content area -->
+<main>
+    <!-- SECTION: grouped content about Mars exploration -->
+    <section id="missions">
+        <h2>Latest Mission: Perseverance Rover</h2>
+        <article>
+            <h3>Searching for Ancient Life</h3>
+            <p>NASA's Perseverance rover landed in Jezero Crater on February 18, 2021. It collects rock cores and searches for signs of ancient microbial life. The rover also carries the Ingenuity helicopter, which performed the first powered flight on another planet.</p>
+            <p>Key instruments include SHERLOC (spectrometer) and MOXIE (experimental oxygen generator). The mission paves the way for human exploration of Mars.</p>
+        </article>
+        <article>
+            <h3>Sample Return Campaign</h3>
+            <p>Perseverance is caching rock samples that will be returned to Earth by a future joint NASA-ESA mission. Scientists hope these samples will answer whether life ever existed on the Red Planet.</p>
+        </article>
+    </section>
+
+    <!-- ASIDE: supplementary information (sidebar style) -->
+    <aside>
+        <h4> Did You Know?</h4>
+        <p>The Perseverance rover is the size of a small car – about 3 metres long, 2.7 metres wide, and 2.2 metres tall. It weighs roughly 1,025 kilograms (2,260 pounds).</p>
+        <p>Its top speed on Mars is just 0.1 miles per hour, but it has already travelled over 15 kilometres!</p>
+    </aside>
+
+    <!-- SECTION with figure / media -->
+    <section id="gallery">
+        <h2> Visual Highlights</h2>
+        <figure>
+            <!-- using placeholder image from Lorem Picsum (space-related ID 118) -->
+            <img src="https://picsum.photos/id/118/400/250" alt="Martian landscape – red rocky terrain" width="400" height="250">
+            <figcaption>Simulated terrain of Jezero Crater – an ancient river delta on Mars.</figcaption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/id/119/400/250" alt="Rover wheel tracks in the sand" width="400" height="250">
+            <figcaption>Track marks left by a rover on Mars, showing the layered soil.</figcaption>
+        </figure>
+    </section>
+
+    <!-- Additional embedded media (audio/video using remote samples) -->
+    <section>
+        <h3> Listen to Mars Wind (simulated)</h3>
+        <audio controls>
+            <source src="MarsMusic.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p><small>* Simulated wind sound recorded by Perseverance’s microphone.</small></p>
+    </section>
+</main>
+
+<!-- FOOTER: contact and legal info -->
+<footer id="contact">
+    <p> Contact us: <a href="#">cosmic@explore.space</a></p>
+    <p>© 2026 Cosmic Horizons – All images are for educational demonstration.</p>
+    <p>Follow our mission updates on <a href="#">Twitter</a> | <a href="#">GitHub</a></p>
+</footer>
+
+</body>
+</html>
