@@ -9,11 +9,28 @@ body{
 }
 
 h1{
- font-size: 5rem;
+ font-size: 4rem;
  text-align: center;
+}
+
+h2{
+ font-size: 2.5rem;
+ text-decoration: underline;
+}
+
+.onlyThis{
+ text-decoration:line-through;
 }
 .tagL{
  font-weight: bolder;
  text-align: center;
  margin-bottom: 2rem;
+}
+
+.last{
+ font-size: 3rem;
+ text-decoration: none;
+ font-weight: bolder;
+ color: rgb(222, 182, 189);
+ transform:rotate(16deg);
 }
