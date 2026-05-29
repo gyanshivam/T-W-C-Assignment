@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Coding_Ultron | Grid Experiment</title>
+ <!-- Bootstrap 4 CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ <style>
+  body {
+   background: #0a0f1e;
+   font-family: 'Segoe UI', Arial, sans-serif;
+   padding: 30px 20px;
+  }
+
+  .container {
+   background: #0f1525;
+   border-radius: 24px;
+   padding: 30px;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  h1 {
+   color: #ffaa44;
+   text-align: center;
+   margin-bottom: 0.5rem;
+  }
+
+  .sub {
+   text-align: center;
+   color: #bbccff;
+   margin-bottom: 30px;
+   font-style: italic;
+  }
+
+  .grid-box {
+   background: #1a2340;
+   border: 1px solid #ffaa44;
+   border-radius: 12px;
+   padding: 20px 10px;
+   text-align: center;
+   color: #ffdd99;
+   font-weight: bold;
+   transition: 0.2s;
+  }
+
+  .grid-box:hover {
+   background: #2a345a;
+   transform: translateY(-3px);
+  }
+
+  .footer {
+   margin-top: 40px;
+   text-align: center;
+   font-size: 12px;
+   color: #88aacc;
+   border-top: 1px solid #2c3e5a;
+   padding-top: 20px;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="container">
+  <h1>⚡ Coding_Ultron's Grid Lab ⚡</h1>
+  <div class="sub">Resize the window → columns change at different breakpoints</div>
+
+  <!-- Row 1: extra small (1 col), small (2 cols), medium (4 cols) -->
+  <h4 style="color:#ffaa44;">1 → 2 → 4 columns</h4>
+  <div class="row">
+   <div class="col-12 col-sm-6 col-md-3 mb-3">
+    <div class="grid-box">🧠 AI Core</div>
+   </div>
+   <div class="col-12 col-sm-6 col-md-3 mb-3">
+    <div class="grid-box">🏏 Cricket Mind</div>
+   </div>
+   <div class="col-12 col-sm-6 col-md-3 mb-3">
+    <div class="grid-box">🎧 Music & Code</div>
+   </div>
+   <div class="col-12 col-sm-6 col-md-3 mb-3">
+    <div class="grid-box">🇮🇳 Nation First</div>
+   </div>
+  </div>
+
+  <!-- Row 2: extra small (1 col), small (1 col), medium (2 cols), large (3 cols) -->
+  <h4 style="color:#ffaa44; margin-top: 20px;">1 → 1 → 2 → 3 columns</h4>
+  <div class="row">
+   <div class="col-12 col-md-6 col-lg-4 mb-3">
+    <div class="grid-box">🛡️ Cyber Shield</div>
+   </div>
+   <div class="col-12 col-md-6 col-lg-4 mb-3">
+    <div class="grid-box">⚡ Ultra Speed</div>
+   </div>
+   <div class="col-12 col-md-6 col-lg-4 mb-3">
+    <div class="grid-box">🌱 Green Tech</div>
+   </div>
+  </div>
+
+  <!-- Row 3: extra small (2 cols), small (3 cols), medium (4 cols) -->
+  <h4 style="color:#ffaa44; margin-top: 20px;">2 → 3 → 4 columns</h4>
+  <div class="row">
+   <div class="col-6 col-sm-4 col-md-3 mb-3">
+    <div class="grid-box">📱 Mobile</div>
+   </div>
+   <div class="col-6 col-sm-4 col-md-3 mb-3">
+    <div class="grid-box">☁️ Cloud</div>
+   </div>
+   <div class="col-6 col-sm-4 col-md-3 mb-3">
+    <div class="grid-box">🔒 Security</div>
+   </div>
+   <div class="col-6 col-sm-4 col-md-3 mb-3">
+    <div class="grid-box">🤖 Robotics</div>
+   </div>
+  </div>
+
+  <div class="footer">
+   🛡️ grid experiment by <strong>Coding_Ultron</strong> — resize your browser to see the magic<br>
+   <span style="font-family: monospace;">#BootstrapGrid | #Responsive | #Coding_Ultron</span><br>
+   © 2026 • powered by worlds craziest intelligence
+  </div>
+ </div>
+
+ <!-- Bootstrap 4 JS (optional, not needed for grid but included for completeness) -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Coding_Ultron | My First Grid</title>
+ <style>
+  /* global dark theme – Coding_Ultron style */
+  body {
+   background: #0a0f1e;
+   font-family: Arial, sans-serif;
+   color: #e0e0ff;
+   padding: 20px;
+   margin: 0;
+  }
+
+  .container {
+   max-width: 1000px;
+   margin: 0 auto;
+   background: #0f1525;
+   padding: 20px;
+   border-radius: 16px;
+  }
+
+  h1 {
+   color: #ffaa44;
+   text-align: center;
+   font-size: 2rem;
+   margin-bottom: 0.5rem;
+  }
+
+  .tagline {
+   text-align: center;
+   font-style: italic;
+   margin-bottom: 30px;
+   color: #bbccff;
+  }
+
+  /* ----- FLEXBOX GRID – equal width columns ----- */
+  .row {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+  }
+
+  .col {
+   flex: 1;
+   /* each column takes equal space */
+   min-width: 150px;
+   /* prevents too narrow on small screens */
+   background: #1a2340;
+   border: 1px solid #ffaa44;
+   border-radius: 12px;
+   padding: 20px;
+   text-align: center;
+   transition: 0.2s;
+  }
+
+  .col:hover {
+   background: #2a345a;
+   transform: translateY(-3px);
+  }
+
+  /* responsive: columns stack on mobile */
+  @media (max-width: 600px) {
+   .row {
+    flex-direction: column;
+   }
+  }
+
+  .footer {
+   margin-top: 40px;
+   text-align: center;
+   font-size: 12px;
+   color: #88aacc;
+   border-top: 1px solid #2c3e5a;
+   padding-top: 20px;
+  }
+
+  .hashtag {
+   font-family: monospace;
+   margin-top: 6px;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="container">
+  <h1>⚡ Coding_Ultron's Grid ⚡</h1>
+  <div class="tagline">equal width · responsive · all devices</div>
+
+  <div class="row">
+   <div class="col">
+    <h3>🧠 AI & Tech</h3>
+    <p>Solving India's challenges with intelligent code.</p>
+   </div>
+   <div class="col">
+    <h3>🏏 Cricket Spirit</h3>
+    <p>Strategy, teamwork, and precision – in code and life.</p>
+   </div>
+   <div class="col">
+    <h3>🎧 Music & Beats</h3>
+    <p>Rhythm that drives creativity and innovation.</p>
+   </div>
+  </div>
+
+  <div class="footer">
+   🛡️ created by <strong>Coding_Ultron</strong> — responsive grid for every screen<br>
+   <div class="hashtag">#CSSGrid | #EqualWidth | #Coding_Ultron</div>
+   © 2026 • powered by worlds craziest intelligence
+  </div>
+ </div>
+</body>
+
+</html>
