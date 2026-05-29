@@ -15,12 +15,7 @@ body {
  padding: 2rem;
 }
 
-/* ----- BOX MODEL DEMONSTRATION -----
-       width      → content width
-       padding    → space inside the box, away from border
-       border     → thickness, style, colour
-       margin     → space outside the box (away from screen edge & other elements)
-    */
+
 .fact-file {
  background-color: #fff6e5;
  
@@ -82,7 +77,7 @@ body {
  border-left: 4px solid #f7b32b;
 }
 
-/* footer – Coding_Ultron signature with mission */
+
 .creator-mission {
  text-align: center;
  margin-top: 30px;
