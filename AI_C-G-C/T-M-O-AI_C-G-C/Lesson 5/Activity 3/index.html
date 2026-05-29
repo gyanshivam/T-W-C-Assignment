@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Coding_Ultron | Pagination Demo</title>
+ <!-- Bootstrap 4.5 CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <style>
+  body {
+   background: #0a0f1e;
+   font-family: 'Segoe UI', Arial, sans-serif;
+   text-align: center;
+   padding: 40px 20px;
+   color: #e0f0ff;
+  }
+
+  .container {
+   background: #0f1525;
+   border-radius: 24px;
+   padding: 30px;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  h1 {
+   color: #ffaa44;
+   text-shadow: 0 0 4px #ff8c00;
+   margin-bottom: 0.5rem;
+  }
+
+  .page-link {
+   background-color: #1a2340;
+   border-color: #ffaa44;
+   color: #ffdd99;
+  }
+
+  .page-link:hover {
+   background-color: #ffaa44;
+   color: #0a0f1e;
+  }
+
+  .page-item.active .page-link {
+   background-color: #ffaa44;
+   border-color: #ffaa44;
+   color: #0a0f1e;
+  }
+
+  .page-item.disabled .page-link {
+   background-color: #2a2e3c;
+   border-color: #5a6e8a;
+   color: #8899bb;
+  }
+
+  .footer {
+   margin-top: 40px;
+   font-size: 12px;
+   color: #88aacc;
+   border-top: 1px solid #2c3e5a;
+   padding-top: 20px;
+  }
+
+  .content-preview {
+   background: #1e2a3a;
+   border-radius: 16px;
+   padding: 20px;
+   margin: 30px 0;
+   text-align: left;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="container">
+  <h1>⚡ Coding_Ultron's Project Archive ⚡</h1>
+  <p class="lead">Navigate through my missions — AI, cricket analytics, and nation‑building projects</p>
+
+  <!-- Dummy content to show what pagination controls -->
+  <div class="content-preview">
+   <h4 style="color:#ffaa44;">📍 Page 1: AI & Full‑Stack</h4>
+   <p>Building intelligent systems with React, Spring Boot, and Python. Exploring LLMs and computer vision for Indian
+    agriculture.</p>
+  </div>
+
+  <h5 style="color:#bbccff;">📄 Browse more projects:</h5>
+
+  <!-- Bootstrap pagination component -->
+  <ul class="pagination justify-content-center">
+   <li class="page-item disabled">
+    <a class="page-link" href="#" tabindex="-1">⏮️ Previous</a>
+   </li>
+   <li class="page-item active"><a class="page-link" href="#">1</a></li>
+   <li class="page-item"><a class="page-link" href="#">2</a></li>
+   <li class="page-item"><a class="page-link" href="#">3</a></li>
+   <li class="page-item"><a class="page-link" href="#">4</a></li>
+   <li class="page-item">
+    <a class="page-link" href="#">Next ⏭️</a>
+   </li>
+  </ul>
+
+  <p class="mt-3 text-muted" style="font-size:0.85rem;">💡 <strong>Note:</strong> Pagination helps users navigate
+   through large sets of content — like project lists, blog posts, or research archives. Here, it's a demo of
+   Bootstrap's component.</p>
+ </div>
+
+ <div class="footer">
+  🛡️ pagination by <strong>Coding_Ultron</strong> — “smooth navigation for a smarter web”<br>
+  <span style="font-family: monospace;">#BootstrapPagination | #ResponsiveNav | #Coding_Ultron</span><br>
+  © 2026 • powered by worlds craziest intelligence
+ </div>
+</body>
+
+</html>
