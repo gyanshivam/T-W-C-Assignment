@@ -1,0 +1,139 @@
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+
+  body {
+   background: linear-gradient(135deg, #0b1426 0%, #030812 100%);
+   font-family: 'Segoe UI', 'Arial', monospace;
+   color: #e0f0ff;
+   padding: 80px 30px 50px 30px;
+   min-height: 200vh;
+   
+  }
+
+
+  h1,
+  h2 {
+   color: #ffaa44;
+   text-shadow: 0 0 4px #ff8c00;
+   letter-spacing: 1px;
+  }
+
+  h1 {
+   margin-bottom: 0.5rem;
+  }
+
+  h2 {
+   margin: 1.2rem 0 0.5rem;
+   border-left: 5px solid #ffaa44;
+   padding-left: 15px;
+  }
+
+
+  .fixed-top-bar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background: #1f2a3e;
+   backdrop-filter: blur(12px);
+   color: #ffcc77;
+   padding: 14px 24px;
+   font-weight: bold;
+   font-size: 1.2rem;
+   border-bottom: 2px solid #ffaa44;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+   z-index: 1000;
+   font-family: monospace;
+  }
+
+  .fixed-top-bar span {
+   color: #88ffaa;
+  }
+
+
+  .list-item {
+   background: #101c2c;
+   border: 1px solid #2c4c6e;
+   padding: 12px 20px;
+   margin: 8px 0;
+   border-radius: 40px;
+   color: #bbd9ff;
+  }
+
+
+  .relative-note {
+   position: relative;
+   left: 40px;
+    background: #2a2e3c;
+   padding: 12px 24px;
+   border-radius: 60px;
+   width: fit-content;
+   margin: 10px 0;
+   color: #ffdd99;
+   border-left: 6px solid #ffaa44;
+   font-style: italic;
+  }
+
+
+  .pet-card {
+   position: relative;
+   background: #0f1a24;
+   border: 2px solid #ffaa44;
+   border-radius: 28px;
+   padding: 24px 28px;
+   margin: 20px 0;
+   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+   width: 320px;
+  }
+
+  
+  .absolute-badge {
+   position: absolute;
+   top: 10px;
+   right: 12px;
+   background: #2c7a47;
+   color: #ffffff;
+   font-weight: bold;
+   font-size: 0.75rem;
+   padding: 6px 12px;
+   border-radius: 40px;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+   text-transform: uppercase;
+   letter-spacing: 1px;
+  }
+
+ 
+  .sticky-label {
+   position: sticky;
+   top: 70px;
+   background: #ffaa44;
+   color: #0a0f1e;
+   padding: 10px 20px;
+   margin: 30px 0 15px 0;
+   font-weight: bold;
+   font-size: 1.2rem;
+   border-radius: 60px;
+   z-index: 500;
+   width: fit-content;
+   font-family: monospace;
+  }
+
+  
+  .creator-footer {
+   margin-top: 60px;
+   text-align: center;
+   font-size: 0.75rem;
+   border-top: 1px solid #2c4c6e;
+   padding-top: 20px;
+   color: #88aacc;
+  }
+
+  .hashtags {
+   font-family: monospace;
+   margin-top: 8px;
+   font-size: 0.7rem;
+   color: #88ccaa;
+  }
