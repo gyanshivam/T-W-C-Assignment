@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Coding_Ultron | Scrollspy Demo</title>
+ <!-- Bootstrap 4.5 CSS + JavaScript (requires jQuery, Popper) -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <style>
+  body {
+   position: relative;
+   background: #0a0f1e;
+   font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  /* custom navbar styling */
+  .navbar {
+   background: #0f1525;
+   border-bottom: 2px solid #ffaa44;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .navbar-brand,
+  .nav-link {
+   color: #ffdd99 !important;
+   font-weight: bold;
+  }
+
+  .navbar-brand:hover,
+  .nav-link:hover {
+   color: #ffaa44 !important;
+  }
+
+  .nav-link.active {
+   color: #ffaa44 !important;
+   border-bottom: 2px solid #ffaa44;
+  }
+
+  /* section styling */
+  .section {
+   min-height: 100vh;
+   padding: 80px 20px 40px;
+   color: #e0f0ff;
+   border-bottom: 1px solid #2c3e5a;
+  }
+
+  #ai {
+   background: linear-gradient(135deg, #0b1426 0%, #030812 100%);
+  }
+
+  #cricket {
+   background: linear-gradient(135deg, #0a1a1a 0%, #02100f 100%);
+  }
+
+  #nation {
+   background: linear-gradient(135deg, #1a0f1a 0%, #10050e 100%);
+  }
+
+  .section h1 {
+   color: #ffaa44;
+   text-shadow: 0 0 4px #ff8c00;
+   margin-bottom: 1rem;
+  }
+
+  .footer {
+   text-align: center;
+   padding: 20px;
+   background: #0a0f1e;
+   color: #88aacc;
+   font-size: 12px;
+   border-top: 1px solid #2c3e5a;
+  }
+ </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbarScrollspy" data-offset="70">
+
+ <!-- Fixed horizontal navbar -->
+ <nav id="navbarScrollspy" class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+   <a class="navbar-brand" href="#">⚡ Coding_Ultron</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="background-color:#ffaa44;"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+     <li class="nav-item">
+      <a class="nav-link" href="#ai">🧠 AI & Tech</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#cricket">🏏 Cricket & Strategy</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#nation">🇮🇳 Nation‑First</a>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </nav>
+
+ <!-- Sections (each one fills the viewport) -->
+ <div id="ai" class="section container-fluid">
+  <div class="container">
+   <h1>🧠 AI & Full‑Stack Mastery</h1>
+   <p class="lead">Building intelligent systems to solve India's challenges – from agriculture to healthcare.</p>
+   <p>With expertise in React, Spring Boot, Python, and LLMs, I develop scalable solutions that empower communities.
+    Scrollspy tracks this section automatically.</p>
+   <p class="mt-4"><em>Current project: AI-powered crop advisory for small farmers.</em></p>
+  </div>
+ </div>
+
+ <div id="cricket" class="section container-fluid">
+  <div class="container">
+   <h1>🏏 Cricket Analytics & Strategy</h1>
+   <p class="lead">Data‑driven insights, team tactics, and performance tracking – just like coding.</p>
+   <p>From player statistics to match simulations, I apply analytical thinking on and off the pitch. Scrollspy
+    highlights this section when you scroll here.</p>
+   <p class="mt-4"><em>Fun fact: I once built a cricket score predictor using machine learning.</em></p>
+  </div>
+ </div>
+
+ <div id="nation" class="section container-fluid">
+  <div class="container">
+   <h1>🇮🇳 Nation‑First Technology</h1>
+   <p class="lead">Digital literacy, food waste reduction, environmental conservation – for a better India.</p>
+   <p>I believe tech should serve the people. My projects focus on affordable ed‑tech, sustainable agriculture, and
+    transparent governance.</p>
+   <p class="mt-4"><em>Mission: Help India become a $10 trillion digital economy with equity for all.</em></p>
+  </div>
+ </div>
+
+ <div class="footer">
+  🛡️ scrollspy by <strong>Coding_Ultron</strong> — “active navigation as you scroll”<br>
+  <span style="font-family: monospace;">#BootstrapScrollspy | #HorizontalNav | #Coding_Ultron</span><br>
+  © 2026 • powered by worlds craziest intelligence
+ </div>
+
+ <!-- Bootstrap JS dependencies (jQuery, Popper, Bootstrap JS) -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
