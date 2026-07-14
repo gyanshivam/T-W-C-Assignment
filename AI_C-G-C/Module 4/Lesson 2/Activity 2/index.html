@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Scope of Variables in Functions</title>
+</head>
+
+<body>
+ <h1>Javascript Functions</h1>
+ <h3>Here we learn about scope of locall variable</h3>
+ 
+  <p>Click the button to calculate the total value.</p>
+ 
+  <button onclick="showResult()">Calculate</button>
+ 
+  <p id="output"></p>
+  <p id="outside"></p>
+ 
+  <script>
+   let price = 15;
+
+   function showResult() {
+    let quantity = 3;
+    document.getElementById("output").innerHTML =
+     "Total Price = " + (price * quantity);
+   }
+
+   // Trying to access a local variable outside the function
+   document.getElementById("outside").innerHTML =
+    "Quantity outside function: " + typeof quantity;
+  </script>
+ 
+</body>
+
+</html>
