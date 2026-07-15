@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>JS Array Methods</title>
+</head>
+
+<body>
+
+ <h2>JavaScript Array Methods</h2>
+ <h3>Using join() and pop()</h3>
+
+ <p>The <b>join()</b> method combines all array elements into a single string, while the <b>pop()</b> method removes the
+  last element from the array.</p>
+
+ <p><strong>Joined Array:</strong></p>
+ <p id="joinedArray"></p>
+
+ <p><strong>Original Array:</strong></p>
+ <p id="beforePop"></p>
+
+ <p><strong>After pop() Method:</strong></p>
+ <p id="afterPop"></p>
+
+ <script>
+  let colors = ["Red", "Blue", "Green", "Yellow"];
+
+  document.getElementById("joinedArray").innerHTML = colors.join(" - ");
+
+  document.getElementById("beforePop").innerHTML = colors;
+
+  colors.pop();
+
+  document.getElementById("afterPop").innerHTML = colors;
+ </script>
+
+</body>
+
+</html>

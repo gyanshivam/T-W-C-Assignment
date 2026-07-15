@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>My Phone contact</title>
+ <style>
+  body {
+   background-color: #eef7ff;
+  }
+ 
+  h1 {
+   color: #0d6efd;
+  }
+ 
+  .label {
+   font-size: 11px;
+   color: gray;
+   text-transform: uppercase;
+  }
+ 
+  pre {
+   font-size: 13px;
+  }
+ </style>
+</head>
+
+<body class="py-4">
+
+ <div class="container">
+
+  <h1 class="mb-2">My Friend Contact</h1>
+  <p class="text-muted mb-4">
+   Learning JavaScript Objects using Dot and Bracket Notation
+  </p>
+
+  <!-- Contact Card -->
+  <div class="card shadow mb-3" style="max-width:420px;">
+   <div class="card-body">
+
+    <h4 class="text-primary">Contact Information</h4>
+
+    <ul class="list-group list-group-flush">
+
+     <li class="list-group-item">
+      <span class="label d-block">Name</span>
+      <strong id="friendName">--</strong>
+     </li>
+
+     <li class="list-group-item">
+      <span class="label d-block">Mobile</span>
+      <strong id="friendPhone">--</strong>
+     </li>
+
+     <li class="list-group-item">
+      <span class="label d-block">Grade</span>
+      <strong id="friendGrade">--</strong>
+     </li>
+
+     <li class="list-group-item">
+      <span class="label d-block">City</span>
+      <strong id="friendCity">--</strong>
+     </li>
+
+    </ul>
+
+   </div>
+  </div>
+
+  <!-- Object Display -->
+  <div class="card shadow" style="max-width:420px;">
+   <div class="card-body">
+
+    <h5 class="text-primary">JavaScript Object</h5>
+
+    <pre id="objectCode" class="bg-light p-3 border rounded"></pre>
+
+   </div>
+  </div>
+
+ </div>
+
+ <script>
+
+  // Create an object
+  let friendContact = {
+   name: "Arjun Verma",
+   mobile: "91234-56789",
+   grade: "6th Grade",
+   city: "Bengaluru"
+  };
+
+  // Dot notation
+  document.getElementById("friendName").textContent = friendContact.name;
+  document.getElementById("friendPhone").textContent = friendContact.mobile;
+
+  // Bracket notation
+  document.getElementById("friendGrade").textContent = friendContact["grade"];
+  document.getElementById("friendCity").textContent = friendContact["city"];
+
+  // Display object
+  document.getElementById("objectCode").textContent =
+   'let friendContact = {\n' +
+   '  name: "' + friendContact.name + '",\n' +
+   '  mobile: "' + friendContact.mobile + '",\n' +
+   '  grade: "' + friendContact["grade"] + '",\n' +
+   '  city: "' + friendContact["city"] + '"\n' +
+   '};';
+
+ </script>
+
+</body>
+
+</html>
