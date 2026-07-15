@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>For Loop</title>
+</head>
+
+<body>
+ 
+ <h2>Using a For Loop in JavaScript</h2>
+ 
+ <p id="result"></p>
+ 
+ <script>
+  let colors = ["Red", "Blue", "Green", "Yellow", "Purple", "Orange"];
+  let display = "";
+
+  for (let index = 0; index < colors.length; index++) {
+   display += colors[index] + "<br>";
+  }
+
+  document.getElementById("result").innerHTML = display;
+ </script>
+
+
+</body>
+
+</html>
