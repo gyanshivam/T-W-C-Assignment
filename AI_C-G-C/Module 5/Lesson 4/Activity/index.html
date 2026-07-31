@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Practice Lab</title>
+
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #eef8ff;
+        }
+
+        h1,
+        h3 {
+            color: #0066cc;
+        }
+
+        .output {
+            background-color: white;
+            color: #0066cc;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-4">
+
+        <h1>JavaScript Practice Lab</h1>
+
+        <p class="text-muted">
+            Learn data types, conversions, string methods, and error handling.
+        </p>
+
+        <!-- typeof -->
+        <div class="card mb-4">
+            <div class="card-body">
+
+                <h3>Check Data Types</h3>
+
+                <button class="btn btn-primary" onclick="showTypes()">
+                    Show Types
+                </button>
+
+                <div id="typeBox" class="output p-3 mt-3">
+                    Click the button to view the data types.
+                </div>
+
+            </div>
+        </div>
+
+        <!-- String() and Number() -->
+        <div class="card mb-4">
+            <div class="card-body">
+
+                <h3>Convert Values</h3>
+
+                <input type="text" id="valueInput" class="form-control mb-2"
+                    placeholder="Enter a number">
+
+                <button class="btn btn-primary mr-2" onclick="convertToString()">
+                    Convert to String
+                </button>
+
+                <button class="btn btn-primary" onclick="convertToNumber()">
+                    Convert to Number
+                </button>
+
+                <div id="convertBox" class="output p-3 mt-3">
+                    Conversion result will appear here.
+                </div>
+
+            </div>
+        </div>
+
+        <!-- search() and replace() -->
+        <div class="card mb-4">
+            <div class="card-body">
+
+                <h3>Search and Replace</h3>
+
+                <input type="text" id="searchWord" class="form-control mb-2"
+                    placeholder="Word to search">
+
+                <input type="text" id="replaceWord" class="form-control mb-2"
+                    placeholder="New word">
+
+                <button class="btn btn-primary mr-2" onclick="findWord()">
+                    Search
+                </button>
+
+                <button class="btn btn-primary" onclick="replaceWord()">
+                    Replace
+                </button>
+
+                <div id="textBox" class="output p-3 mt-3">
+                    Sentence: Learning JavaScript is fun and useful.
+                </div>
+
+            </div>
+        </div>
+
+        <!-- try/catch -->
+        <div class="card">
+            <div class="card-body">
+
+                <h3>Safe Division</h3>
+
+                <input type="text" id="divideInput" class="form-control mb-2"
+                    placeholder="Enter a divisor">
+
+                <button class="btn btn-primary" onclick="safeDivide()">
+                    Calculate
+                </button>
+
+                <div id="resultBox" class="output p-3 mt-3">
+                    Enter a number to divide 100.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        let sentence = "Learning JavaScript is fun and useful.";
+
+        function showTypes() {
+
+            document.getElementById("typeBox").innerHTML =
+                "Age (18): " + typeof 18 + "<br>" +
+                "Name ('Riya'): " + typeof "Riya" + "<br>" +
+                "Passed (false): " + typeof false;
+
+        }
+
+        function convertToString() {
+
+            let value = document.getElementById("valueInput").value;
+
+            document.getElementById("convertBox").innerHTML =
+                "String Value: " + String(value) +
+                "<br>Type: " + typeof String(value);
+
+        }
+
+        function convertToNumber() {
+
+            let value = document.getElementById("valueInput").value;
+
+            document.getElementById("convertBox").innerHTML =
+                "Number Value: " + Number(value) +
+                "<br>Type: " + typeof Number(value);
+
+        }
+
+        function findWord() {
+
+            let word = document.getElementById("searchWord").value;
+
+            let position = sentence.search(word);
+
+            if (position == -1) {
+                document.getElementById("textBox").innerHTML =
+                    "Word not found.";
+            } else {
+                document.getElementById("textBox").innerHTML =
+                    "Word found at position: " + position;
+            }
+
+        }
+
+        function replaceWord() {
+
+            let oldWord = document.getElementById("searchWord").value;
+            let newWord = document.getElementById("replaceWord").value;
+
+            document.getElementById("textBox").innerHTML =
+                sentence.replace(oldWord, newWord);
+
+        }
+
+        function safeDivide() {
+
+            try {
+
+                let value = document.getElementById("divideInput").value;
+
+                if (value == "" || isNaN(value)) {
+                    throw "Please enter a valid number.";
+                }
+
+                document.getElementById("resultBox").innerHTML =
+                    "100 ÷ " + value + " = " + (100 / Number(value));
+
+            }
+            catch (error) {
+
+                document.getElementById("resultBox").innerHTML =
+                    "Error: " + error;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
