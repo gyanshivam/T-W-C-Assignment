@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Space Explorer</title>
+
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #eef7ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #0d6efd;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .planetCard {
+            background: white;
+            border: 2px solid #0d6efd;
+            border-radius: 10px;
+            width: 210px;
+            padding: 18px;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .info {
+            margin-top: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Space Explorer</h1>
+
+    <p>Click the button to display planet information.</p>
+
+    <button onclick="displayPlanets()">Display Planets</button>
+
+    <div class="container">
+        <div id="planetOne"></div>
+        <div id="planetTwo"></div>
+        <div id="planetThree"></div>
+    </div>
+
+    <script>
+
+        class SpacePlanet {
+
+            constructor(planetName, detail) {
+                this.planetName = planetName;
+                this.detail = detail;
+            }
+
+            getInfo() {
+                return this.detail;
+            }
+
+        }
+
+        function displayPlanets() {
+
+            let firstPlanet = new SpacePlanet("Mercury", "It is the closest planet to the Sun.");
+            let secondPlanet = new SpacePlanet("Venus", "It is the hottest planet in our solar system.");
+            let thirdPlanet = new SpacePlanet("Jupiter", "It is the largest planet in the solar system.");
+
+            document.getElementById("planetOne").innerHTML =
+                "<div class='planetCard'><div class='title'>" +
+                firstPlanet.planetName +
+                "</div><div class='info'>" +
+                firstPlanet.getInfo() +
+                "</div></div>";
+
+            document.getElementById("planetTwo").innerHTML =
+                "<div class='planetCard'><div class='title'>" +
+                secondPlanet.planetName +
+                "</div><div class='info'>" +
+                secondPlanet.getInfo() +
+                "</div></div>";
+
+            document.getElementById("planetThree").innerHTML =
+                "<div class='planetCard'><div class='title'>" +
+                thirdPlanet.planetName +
+                "</div><div class='info'>" +
+                thirdPlanet.getInfo() +
+                "</div></div>";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
