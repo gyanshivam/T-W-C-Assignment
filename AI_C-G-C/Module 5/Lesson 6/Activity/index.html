@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Challenge</title>
+
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #eef8ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: darkgreen;
+        }
+
+        input {
+            width: 240px;
+            padding: 8px;
+            margin: 6px;
+            border: 2px solid darkgreen;
+            border-radius: 6px;
+        }
+
+        button {
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        #time {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Number Challenge</h1>
+
+    <p>Enter your details and guess the secret number!</p>
+
+    <input type="text" id="playerName" placeholder="Enter your name"><br>
+    <p id="nameMessage"></p>
+
+    <input type="number" id="playerGuess" placeholder="Choose a number (1-5)" min="1" max="5"><br>
+    <p id="guessMessage"></p>
+
+    <button onclick="playGame()">Check Result</button>
+
+    <p id="gameResult"></p>
+
+    <p id="time"></p>
+
+    <script>
+
+        let timeSpent = 0;
+
+        setInterval(function () {
+
+            timeSpent++;
+
+            document.getElementById("time").innerHTML =
+                "Time on page: " + timeSpent + " seconds";
+
+        }, 1000);
+
+
+        function playGame() {
+
+            let player = document.getElementById("playerName").value;
+            let guess = document.getElementById("playerGuess").value;
+
+            let valid = true;
+
+            if (player == "") {
+
+                document.getElementById("nameMessage").innerHTML =
+                    "Name is required.";
+
+                document.getElementById("nameMessage").style.color = "red";
+
+                valid = false;
+
+            } else {
+
+                document.getElementById("nameMessage").innerHTML =
+                    "Name accepted.";
+
+                document.getElementById("nameMessage").style.color = "green";
+
+            }
+
+
+            if (guess == "") {
+
+                document.getElementById("guessMessage").innerHTML =
+                    "Enter a number between 1 and 5.";
+
+                document.getElementById("guessMessage").style.color = "red";
+
+                valid = false;
+
+            } else {
+
+                document.getElementById("guessMessage").innerHTML =
+                    "Guess received.";
+
+                document.getElementById("guessMessage").style.color = "green";
+
+            }
+
+
+            if (valid) {
+
+                let secretNumber = Math.floor(Math.random() * 5) + 1;
+
+                if (Number(guess) === secretNumber) {
+
+                    document.getElementById("gameResult").innerHTML =
+                        "Congratulations " + player +
+                        "! You guessed the correct number: " + secretNumber;
+
+                    document.getElementById("gameResult").style.color = "green";
+
+                } else {
+
+                    document.getElementById("gameResult").innerHTML =
+                        "Sorry " + player +
+                        ". The correct number was " + secretNumber + ".";
+
+                    document.getElementById("gameResult").style.color = "blue";
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
