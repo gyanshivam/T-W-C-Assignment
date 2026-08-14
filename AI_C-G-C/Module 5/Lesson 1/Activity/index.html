@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Player Dashboard</title>
+
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #eef8ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: darkgreen;
+        }
+
+        button {
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 18px;
+            cursor: pointer;
+        }
+
+        .box {
+            width: 320px;
+            margin: 8px auto;
+            padding: 10px;
+            border: 1px solid darkgreen;
+            border-radius: 6px;
+            text-align: left;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Player Dashboard</h1>
+
+    <button onclick="displayProfile()">Display Profile</button>
+
+    <div class="box">Player: <span id="player"></span></div>
+    <div class="box">Game: <span id="game"></span></div>
+    <div class="box">Points: <span id="points"></span></div>
+    <div class="box">New Record: <span id="record"></span></div>
+    <div class="box">Badge: <span id="badge"></span></div>
+    <div class="box">Greeting: <span id="message"></span></div>
+    <div class="box">Trail: <span id="trail"></span></div>
+    <div class="box">Reward: <span id="reward"></span></div>
+    <div class="box">Club: <span id="club"></span></div>
+
+    <script>
+
+        function displayProfile() {
+
+            // Variables
+            let playerName = "Rohan";
+            let gameName = "Car Race";
+            let score = 92;
+            let maxScore = 100;
+            let reward = null;
+            let club;
+
+            // Comparison
+            let newRecord = score > 90;
+
+            // if...else
+            let badge;
+
+            if (score >= 90) {
+                badge = "Diamond";
+            } else if (score >= 70) {
+                badge = "Platinum";
+            } else {
+                badge = "Starter";
+            }
+
+            // Greeting using Date
+            let currentHour = new Date().getHours();
+            let greeting;
+
+            if (currentHour < 12) {
+                greeting = "Good Morning!";
+            } else if (currentHour < 18) {
+                greeting = "Good Afternoon!";
+            } else {
+                greeting = "Good Evening!";
+            }
+
+            // While loop
+            let trail = "";
+            let i = 0;
+
+            while (i < 4) {
+                trail += "★ ";
+                i++;
+            }
+
+            // Display values
+            document.getElementById("player").innerHTML = playerName;
+            document.getElementById("game").innerHTML = gameName;
+            document.getElementById("points").innerHTML = score + " / " + maxScore;
+            document.getElementById("record").innerHTML = newRecord;
+            document.getElementById("badge").innerHTML = badge;
+            document.getElementById("message").innerHTML = greeting;
+            document.getElementById("trail").innerHTML = trail;
+            document.getElementById("reward").innerHTML = reward;
+            document.getElementById("club").innerHTML = club;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

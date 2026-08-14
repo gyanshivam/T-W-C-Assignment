@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Package Tracker</title>
+
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #eef8ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .box {
+            width: 320px;
+            margin: 8px auto;
+            padding: 10px;
+            border: 1px solid #0066cc;
+            border-radius: 6px;
+            text-align: left;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Package Tracker</h1>
+
+    <button onclick="storePackage()">Store Package</button>
+    <button onclick="trackPackage()">Track Package</button>
+
+    <div class="box">JSON Data: <span id="jsonData"></span></div>
+    <div class="box">Product: <span id="product"></span></div>
+    <div class="box">Cost: <span id="cost"></span></div>
+    <div class="box">Current Status: <span id="currentStatus"></span></div>
+    <div class="box">Final Message: <span id="finalMessage"></span></div>
+
+    <script>
+
+        // Package object
+        let packageInfo = {
+            product: "Headphones",
+            cost: 1200,
+            seller: "Tech Store"
+        };
+
+        // Convert object to JSON and back
+        function storePackage() {
+
+            let jsonString = JSON.stringify(packageInfo);
+            let loadedPackage = JSON.parse(jsonString);
+
+            document.getElementById("jsonData").innerHTML = jsonString;
+            document.getElementById("product").innerHTML = loadedPackage.product;
+            document.getElementById("cost").innerHTML = "₹" + loadedPackage.cost;
+
+        }
+
+        // Delay function
+        function wait(ms) {
+            return new Promise(function (resolve) {
+                setTimeout(resolve, ms);
+            });
+        }
+
+        // Track delivery
+        async function trackPackage() {
+
+            document.getElementById("finalMessage").innerHTML = "";
+
+            document.getElementById("currentStatus").innerHTML =
+                "Package confirmed.";
+
+            setTimeout(function () {
+                document.getElementById("currentStatus").innerHTML =
+                    "Package packed.";
+            }, 1000);
+
+            await wait(3000);
+
+            document.getElementById("currentStatus").innerHTML =
+                "Package is on the way.";
+
+            await wait(2000);
+
+            document.getElementById("finalMessage").innerHTML =
+                "Package delivered successfully!";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

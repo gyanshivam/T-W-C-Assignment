@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Music Collection</title>
+
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #eef8ff;
+        }
+
+        h1,
+        h3 {
+            color: #0066cc;
+        }
+
+        .resultBox {
+            background-color: white;
+            color: #0066cc;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-4">
+
+        <h1>Music Collection</h1>
+
+        <p class="text-muted">
+            Use JavaScript array methods to organize your favorite songs.
+        </p>
+
+        <!-- Song Titles -->
+        <div class="card mb-4">
+            <div class="card-body">
+
+                <h3>Song Titles</h3>
+
+                <button class="btn btn-success mr-2" onclick="ascendingOrder()">
+                    Ascending
+                </button>
+
+                <button class="btn btn-success" onclick="descendingOrder()">
+                    Descending
+                </button>
+
+                <div id="songsOutput" class="resultBox p-3 mt-3"></div>
+
+            </div>
+        </div>
+
+        <!-- Song Duration -->
+        <div class="card mb-4">
+            <div class="card-body">
+
+                <h3>Song Duration (Seconds)</h3>
+
+                <button class="btn btn-success mr-2" onclick="shortestFirst()">
+                    Shortest First
+                </button>
+
+                <button class="btn btn-success" onclick="longestFirst()">
+                    Longest First
+                </button>
+
+                <div id="durationOutput" class="resultBox p-3 mt-3"></div>
+
+            </div>
+        </div>
+
+        <!-- Map Method -->
+        <div class="card">
+            <div class="card-body">
+
+                <h3>Add Time Label</h3>
+
+                <button class="btn btn-success" onclick="showDurationLabel()">
+                    Show Labels
+                </button>
+
+                <div id="labelOutput" class="resultBox p-3 mt-3"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        let songTitles = ["Dream", "Melody", "Rhythm", "Harmony", "Echo"];
+        let durations = [180, 240, 150, 210, 300];
+
+        document.getElementById("songsOutput").innerHTML =
+            "Songs: " + songTitles;
+
+        document.getElementById("durationOutput").innerHTML =
+            "Duration: " + durations;
+
+        document.getElementById("labelOutput").innerHTML =
+            "Click the button to display labels.";
+
+        function ascendingOrder() {
+            songTitles.sort();
+            document.getElementById("songsOutput").innerHTML =
+                "Ascending: " + songTitles;
+        }
+
+        function descendingOrder() {
+            songTitles.sort();
+            songTitles.reverse();
+            document.getElementById("songsOutput").innerHTML =
+                "Descending: " + songTitles;
+        }
+
+        function shortestFirst() {
+            durations.sort(function (a, b) {
+                return a - b;
+            });
+
+            document.getElementById("durationOutput").innerHTML =
+                "Shortest First: " + durations;
+        }
+
+        function longestFirst() {
+            durations.sort(function (a, b) {
+                return b - a;
+            });
+
+            document.getElementById("durationOutput").innerHTML =
+                "Longest First: " + durations;
+        }
+
+        function showDurationLabel() {
+
+            let labels = durations.map(function (time) {
+                return time + " seconds";
+            });
+
+            document.getElementById("labelOutput").innerHTML =
+                "Labelled: " + labels;
+        }
+
+    </script>
+
+</body>
+
+</html>
