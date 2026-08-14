@@ -1,0 +1,133 @@
+/* Remove the browser's default margin from the page */
+body {
+ margin: 0;
+
+ /* Use the Google Font loaded in the HTML file */
+ font-family: "Baloo Tamma 2", sans-serif;
+
+ /* Give the page a simple light background */
+ background: #f5f5f5;
+}
+
+
+/*
+    ============================================================
+    NAVIGATION BAR
+    ============================================================
+
+    .navbar-area targets the <nav> element.
+
+    display: flex places the brand and menu next to each other.
+
+    justify-content: space-between pushes the brand to the
+    left and the navigation links to the right.
+
+    align-items: center vertically aligns both sections.
+*/
+
+.navbar-area {
+ background: #202020;
+
+ display: flex;
+
+ justify-content: space-between;
+
+ align-items: center;
+
+ padding: 15px 40px;
+
+ border-bottom: 3px solid #ffc107;
+}
+
+
+/*
+    ============================================================
+    BRAND SECTION
+    ============================================================
+
+    This contains the icon and website name.
+*/
+
+.brand-section {
+ display: flex;
+
+ align-items: center;
+
+ color: white;
+
+ font-size: 20px;
+
+ font-weight: 700;
+}
+
+
+/*
+    Style the Font Awesome icon.
+
+    The icon gets the Bootstrap warning color.
+*/
+
+.brand-section i {
+ color: #ffc107;
+
+ font-size: 24px;
+
+ margin-right: 10px;
+}
+
+
+/*
+    ============================================================
+    MENU SECTION
+    ============================================================
+
+    Flexbox places all navigation links in a horizontal row.
+*/
+
+.menu-section {
+ display: flex;
+
+ align-items: center;
+
+ gap: 25px;
+}
+
+
+/*
+    ============================================================
+    NAVIGATION LINKS
+    ============================================================
+
+    Remove the default underline from links.
+
+    Give them a white color so they are visible against
+    the dark navigation bar.
+*/
+
+.menu-section a {
+ text-decoration: none;
+
+ color: white;
+
+ font-size: 16px;
+
+ font-weight: 600;
+
+ transition: 0.3s;
+}
+
+
+/*
+    ============================================================
+    HOVER EFFECT
+    ============================================================
+
+    :hover applies these styles when the mouse pointer
+    moves over a navigation link.
+
+    The link changes from white to yellow.
+*/
+
+.menu-section a:hover {
+ color: #ffc107;
+}

@@ -1,0 +1,170 @@
+/*
+    ============================================================
+    BASIC PAGE STYLING
+    ============================================================
+*/
+
+html {
+ /* Makes scrolling between sections smooth */
+ scroll-behavior: smooth;
+}
+
+
+body {
+ /* Removes the browser's default outer spacing */
+ margin: 0;
+
+ /* Uses the Google Font loaded in the HTML */
+ font-family: "Baloo Tamma 2", sans-serif;
+
+ /* Dark background for the rest of the page */
+ background: #222;
+}
+
+
+/*
+    ============================================================
+    BANNER SECTION
+    ============================================================
+
+    This is the main part of the activity.
+
+    Instead of putting an image directly inside an <img> tag,
+    we use the image as a CSS background.
+
+    This is useful for large hero/banner sections.
+*/
+
+.hero-banner {
+
+ /* Makes the banner fill the complete screen height */
+ height: 100vh;
+
+ /*
+        Adds the banner image behind the content.
+
+        Replace the image URL with your own image if needed.
+    */
+ background-image:
+  url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3");
+
+ /*
+        Makes the background image cover the entire banner.
+
+        The image may be cropped slightly so that the
+        complete banner area is filled.
+    */
+ background-size: cover;
+
+ /*
+        Places the most important part of the image
+        near the center.
+    */
+ background-position: center;
+
+ /*
+        Keeps the background image in place while
+        the user scrolls.
+    */
+ background-attachment: fixed;
+
+ /*
+        Flexbox allows us to easily position the
+        banner content.
+    */
+ display: flex;
+
+ /*
+        Centers the content vertically.
+    */
+ align-items: center;
+
+ /*
+        Centers the content horizontally.
+    */
+ justify-content: center;
+
+ /*
+        Makes the text white so it can be seen
+        clearly over the image.
+    */
+ color: white;
+
+ /*
+        Centers the text.
+    */
+ text-align: center;
+}
+
+
+/*
+    ============================================================
+    BANNER CONTENT
+    ============================================================
+
+    This controls the text and button placed
+    inside the banner.
+*/
+
+.banner-content {
+
+ /*
+        Adds a dark transparent background behind the text.
+
+        rgba():
+
+        0   = red
+        0   = green
+        0   = blue
+        0.55 = 55% opacity
+
+        This makes the text easier to read while still
+        allowing the banner image to remain visible.
+    */
+ background: rgba(0, 0, 0, 0.55);
+
+ /*
+        Adds space inside the content box.
+    */
+ padding: 40px;
+
+ /*
+        Rounds the corners of the content box.
+    */
+ border-radius: 15px;
+
+}
+
+
+/*
+    ============================================================
+    MAIN BANNER HEADING
+    ============================================================
+*/
+
+.banner-content h1 {
+
+ /* Makes the heading bold */
+ font-weight: 700;
+
+ /* Adds a little space below the heading */
+ margin-bottom: 15px;
+
+}
+
+
+/*
+    ============================================================
+    BANNER PARAGRAPH
+    ============================================================
+*/
+
+.banner-content p {
+
+ /* Makes the subtitle slightly larger */
+ font-size: 22px;
+
+ /* Adds space below the paragraph */
+ margin-bottom: 25px;
+
+}
