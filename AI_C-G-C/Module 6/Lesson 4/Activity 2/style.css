@@ -1,0 +1,291 @@
+/*
+    The universal selector applies these properties
+    to every element.
+
+    box-sizing: border-box makes width and height easier
+    to control because padding and borders are included
+    inside the declared size.
+*/
+* {
+ box-sizing: border-box;
+}
+
+
+/*
+    BODY
+
+    The body contains the complete webpage.
+
+    We remove the default browser margin and use
+    the Google Poppins font.
+*/
+body {
+ margin: 0;
+ font-family: "Poppins", sans-serif;
+
+ /*
+        A dark background gives the calculator
+        a clear contrast with the lighter calculator body.
+    */
+ background: #202124;
+}
+
+
+/*
+    PAGE WRAPPER
+
+    This wrapper takes up the screen and uses Flexbox
+    to place the calculator in the center.
+
+    display: flex activates Flexbox.
+
+    justify-content controls horizontal positioning.
+
+    align-items controls vertical positioning.
+*/
+.page {
+ min-height: 100vh;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ padding: 25px;
+}
+
+
+/*
+    CALCULATOR BODY
+
+    This is the main rectangular calculator.
+
+    width controls its horizontal size.
+
+    background-color gives the calculator a light surface.
+
+    border-radius rounds the corners.
+
+    box-shadow creates a shadow around the calculator,
+    making it look slightly raised from the page.
+*/
+.calculator {
+ width: 330px;
+ background-color: #f1f3f4;
+
+ border-radius: 18px;
+
+ padding: 18px;
+
+ box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+/*
+    DISPLAY
+
+    The display is the upper part of the calculator.
+
+    It provides space for the previous calculation
+    and the current result.
+*/
+.display {
+ height: 115px;
+
+ background-color: #ffffff;
+
+ border-radius: 12px;
+
+ padding: 15px;
+
+ margin-bottom: 15px;
+
+ /*
+        Flexbox allows us to position the output
+        toward the bottom of the display.
+    */
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+
+ text-align: right;
+}
+
+
+/*
+    HISTORY
+
+    This area can later contain the previous
+    mathematical expression.
+
+    A smaller font makes it visually different
+    from the main answer.
+*/
+.history {
+ min-height: 25px;
+
+ color: #777;
+
+ font-size: 13px;
+}
+
+
+/*
+    OUTPUT
+
+    This is where the main calculator answer
+    will eventually appear.
+
+    The larger font makes the result easier to read.
+*/
+.output {
+ color: #222;
+
+ font-size: 30px;
+
+ font-weight: 600;
+
+ overflow: hidden;
+}
+
+
+/*
+    KEYBOARD
+
+    CSS Grid is useful for a calculator because
+    calculator buttons naturally fit into rows and columns.
+
+    repeat(4, 1fr) creates four equal-width columns.
+*/
+.keyboard {
+ display: grid;
+
+ grid-template-columns: repeat(4, 1fr);
+
+ gap: 10px;
+}
+
+
+/*
+    ALL BUTTONS
+
+    These basic properties are shared by every
+    calculator button.
+*/
+button {
+ height: 58px;
+
+ border: none;
+
+ border-radius: 12px;
+
+ font-family: inherit;
+
+ font-size: 17px;
+
+ font-weight: 600;
+
+ cursor: pointer;
+
+ /*
+        transition makes changes such as hover effects
+        happen smoothly instead of instantly.
+    */
+ transition: transform 0.15s ease,
+  background-color 0.15s ease;
+}
+
+
+/*
+    NUMBER BUTTONS
+
+    Number buttons use a light background.
+*/
+.number {
+ background-color: #ffffff;
+
+ color: #333;
+}
+
+
+/*
+    OPERATOR BUTTONS
+
+    Operators such as +, -, × and ÷ receive
+    a different background so that users can
+    easily distinguish them from numbers.
+*/
+.operator {
+ background-color: #d9e2ff;
+
+ color: #304ffe;
+}
+
+
+/*
+    EQUAL BUTTON
+
+    The equals button is given a stronger appearance
+    because it performs the final calculation.
+*/
+.equals {
+ background-color: #304ffe;
+
+ color: white;
+}
+
+
+/*
+    EMPTY BUTTONS
+
+    These buttons are only placeholders used to
+    preserve the calculator layout.
+
+    They don't need a visible background.
+*/
+.empty {
+ visibility: hidden;
+}
+
+
+/*
+    HOVER EFFECT
+
+    :hover is activated when the mouse pointer
+    moves over a button.
+
+    The button becomes slightly larger to provide
+    visual feedback to the user.
+*/
+button:hover {
+ transform: scale(1.04);
+}
+
+
+/*
+    ACTIVE EFFECT
+
+    :active happens while the user is pressing
+    the button.
+
+    Making it slightly smaller gives the feeling
+    of physically pressing a calculator button.
+*/
+button:active {
+ transform: scale(0.95);
+}
+
+
+/*
+    FOCUS
+
+    Browsers normally show an outline around
+    focused buttons.
+
+    We replace that default appearance with a
+    subtle shadow.
+*/
+button:focus {
+ outline: none;
+
+ box-shadow: 0 0 0 3px rgba(48, 79, 254, 0.2);
+}

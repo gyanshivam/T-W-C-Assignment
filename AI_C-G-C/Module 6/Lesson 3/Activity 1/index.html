@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ <!--
+        UTF-8 allows the browser to correctly understand
+        normal letters, symbols and special characters.
+    -->
+ <meta charset="UTF-8">
+
+
+ <!--
+        Makes the webpage responsive.
+
+        The width of the webpage will match the width
+        of the device screen.
+    -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+ <!--
+        Bootstrap CSS
+
+        Bootstrap provides ready-made classes for:
+        - responsive layouts
+        - spacing
+        - colors
+        - buttons
+        - alignment
+        - grid systems
+    -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+ <!-- Our custom CSS -->
+ <link rel="stylesheet" href="style.css">
+
+
+ <!--
+        Font Awesome
+
+        This stylesheet provides icons such as:
+        LinkedIn, GitHub, Instagram, Email, etc.
+    -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+ <!--
+        Google Fonts
+
+        Loads the Nunito font from Google Fonts.
+    -->
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+ <title>My Social Media</title>
+
+</head>
+
+
+<body>
+
+
+ <!--
+        =====================================================
+        SOCIAL MEDIA SECTION
+        =====================================================
+
+        "container-fluid" is a Bootstrap class.
+
+        Unlike "container", container-fluid uses almost
+        the complete width of the browser window.
+
+        This is useful for full-width website sections.
+    -->
+ <section id="social" class="container-fluid social-section">
+
+
+  <!--
+            The inner container keeps the content from
+            becoming too wide on large screens.
+
+            "py-5" adds vertical padding.
+        -->
+  <div class="container py-5">
+
+
+   <!-- Small section heading -->
+   <h5 class="text-warning section-label">
+    CONNECT WITH ME
+   </h5>
+
+
+   <!-- Main heading -->
+   <h1 class="text-white social-heading">
+    Find Me Online
+   </h1>
+
+
+   <!--
+                Small description introducing the links.
+            -->
+   <p class="text-light intro-text">
+    Follow my work and connect with me through
+    my social platforms.
+   </p>
+
+
+   <!--
+                =================================================
+                SOCIAL MEDIA ROW
+                =================================================
+
+                Bootstrap's "row" creates a grid row.
+
+                Each social media item is placed inside
+                a Bootstrap column.
+            -->
+   <div class="row mt-4">
+
+
+    <!--
+                    LinkedIn
+
+                    col-md-4:
+                    On medium screens and larger, this takes
+                    4 out of 12 columns.
+
+                    col-12:
+                    On small screens, it occupies the full width.
+                -->
+    <div class="col-12 col-md-4 mb-3">
+
+     <a href="#" class="social-card d-flex align-items-center justify-content-between">
+
+
+      <!-- Social platform name -->
+      <span>LinkedIn</span>
+
+
+      <!--
+                            Font Awesome LinkedIn icon.
+
+                            "fab" represents the Font Awesome
+                            Brands icon collection.
+                        -->
+      <i class="fab fa-linkedin-in"></i>
+
+     </a>
+
+    </div>
+
+
+    <!--
+                    GitHub card
+                -->
+    <div class="col-12 col-md-4 mb-3">
+
+     <a href="#" class="social-card d-flex align-items-center justify-content-between">
+
+      <span>GitHub</span>
+
+      <i class="fab fa-github"></i>
+
+     </a>
+
+    </div>
+
+
+    <!--
+                    Email card
+
+                    Instead of a social platform, email gives
+                    visitors another way to contact the website
+                    owner.
+                -->
+    <div class="col-12 col-md-4 mb-3">
+
+     <a href="mailto:hello@example.com"
+      class="social-card email-card d-flex align-items-center justify-content-between">
+
+      <span>Email Me</span>
+
+      <!--
+                            "fas" represents Font Awesome's
+                            solid icon collection.
+                        -->
+      <i class="fas fa-envelope"></i>
+
+     </a>
+
+    </div>
+
+
+   </div>
+
+  </div>
+
+ </section>
+
+
+</body>
+
+</html>

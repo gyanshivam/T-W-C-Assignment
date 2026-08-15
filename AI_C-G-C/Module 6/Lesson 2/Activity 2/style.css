@@ -1,0 +1,283 @@
+/*
+    =========================================================
+    BODY
+    =========================================================
+
+    The body contains the complete visible webpage.
+
+    We use a dark background so that the project cards
+    stand out clearly.
+*/
+
+body {
+
+ /* Removes the browser's default margin */
+ margin: 0;
+
+ /* Dark background for the website */
+ background: #20242b;
+
+ /*
+        Uses the Google Font loaded in the HTML.
+
+        sans-serif is the fallback font if the Google
+        font cannot be loaded.
+    */
+ font-family: "Nunito", sans-serif;
+
+}
+
+
+/*
+    =========================================================
+    PROJECT SECTION HEADING
+    =========================================================
+*/
+
+.project-title {
+
+ /*
+        Makes the heading bold.
+    */
+ font-weight: 800;
+
+
+ /*
+        Increases the size of the heading.
+    */
+ font-size: 2.5rem;
+
+
+ /*
+        Adds a small decorative line below the heading.
+    */
+ border-bottom: 2px solid #ffc107;
+
+
+ /*
+        Allows the border to fit around the text
+        instead of stretching across the entire row.
+    */
+ display: inline-block;
+
+
+ /*
+        Adds some space below the heading.
+    */
+ padding-bottom: 8px;
+
+}
+
+
+/*
+    =========================================================
+    PROJECT CARDS
+    =========================================================
+
+    Bootstrap already provides the basic card appearance.
+
+    These custom rules modify the Bootstrap card design.
+*/
+
+.project-card {
+
+ /*
+        Removes the default card border.
+    */
+ border: none;
+
+
+ /*
+        Rounds the corners of the card.
+    */
+ border-radius: 12px;
+
+
+ /*
+        Creates a shadow around the card.
+
+        This gives the card a raised appearance.
+    */
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+
+ /*
+        Hides anything that goes outside the rounded
+        boundaries of the card.
+
+        This is especially useful for the image at
+        the top of the card.
+    */
+ overflow: hidden;
+
+
+ /*
+        Makes the change in appearance smooth when
+        the card is hovered.
+    */
+ transition: transform 0.3s ease,
+  box-shadow 0.3s ease;
+
+}
+
+
+/*
+    =========================================================
+    CARD HOVER EFFECT
+    =========================================================
+
+    :hover applies these rules when the mouse pointer
+    is placed over the card.
+*/
+
+.project-card:hover {
+
+ /*
+        Moves the card slightly upward.
+
+        Negative Y means upward movement.
+    */
+ transform: translateY(-8px);
+
+
+ /*
+        Makes the shadow stronger while hovering.
+    */
+ box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+
+}
+
+
+/*
+    =========================================================
+    PROJECT IMAGE
+    =========================================================
+*/
+
+.project-image {
+
+ /*
+        Gives every project image the same height.
+
+        This keeps all the cards visually consistent.
+    */
+ height: 190px;
+
+
+ /*
+        Adds space around the image.
+    */
+ padding: 15px;
+
+
+ /*
+        contain tells the browser to keep the entire
+        image visible without cropping it.
+
+        This is useful for illustrations and SVG images.
+    */
+ object-fit: contain;
+
+
+ /*
+        Gives the image a very light background.
+    */
+ background-color: #f7f7f7;
+
+}
+
+
+/*
+    =========================================================
+    CARD TITLE
+    =========================================================
+*/
+
+.card-title {
+
+ /*
+        Makes project names bold.
+    */
+ font-weight: 700;
+
+
+ /*
+        Gives the title a dark text color.
+    */
+ color: #252525;
+
+}
+
+
+/*
+    =========================================================
+    CARD DESCRIPTION
+    =========================================================
+*/
+
+.card-text {
+
+ /*
+        Makes the description slightly smaller
+        than the normal body text.
+    */
+ font-size: 0.9rem;
+
+
+ /*
+        Gives the paragraph a softer gray color.
+    */
+ color: #666;
+
+
+ /*
+        Controls the distance between lines.
+
+        A larger line-height generally makes paragraphs
+        easier to read.
+    */
+ line-height: 1.6;
+
+}
+
+
+/*
+    =========================================================
+    PROJECT BUTTON
+    =========================================================
+*/
+
+.project-card .btn-warning {
+
+ /*
+        Makes the button text bold.
+    */
+ font-weight: 700;
+
+
+ /*
+        Removes the default sharp corners.
+    */
+ border-radius: 6px;
+
+
+ /*
+        Adds a small animation when the button changes.
+    */
+ transition: transform 0.2s ease;
+
+}
+
+
+/*
+    Button hover effect
+*/
+
+.project-card .btn-warning:hover {
+
+ /*
+        Slightly enlarges the button.
+    */
+ transform: scale(1.04);
+
+}

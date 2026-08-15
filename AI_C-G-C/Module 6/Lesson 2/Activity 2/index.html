@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ <!--
+        Specifies UTF-8 character encoding.
+        This allows the browser to correctly display
+        letters, symbols and special characters.
+    -->
+ <meta charset="UTF-8">
+
+
+ <!--
+        Makes the website responsive.
+
+        The page width will automatically match
+        the width of the device screen.
+    -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+ <!--
+        Bootstrap CSS
+
+        Bootstrap provides ready-made classes for:
+        - responsive layouts
+        - grids
+        - cards
+        - buttons
+        - spacing
+        - typography
+    -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+ <!--
+        Custom CSS
+
+        This file contains the styles that we create
+        specifically for our project section.
+    -->
+ <link rel="stylesheet" href="style.css">
+
+
+ <!--
+        Google Fonts
+
+        The website uses the "Nunito" font loaded
+        from Google's font service.
+    -->
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+ <title>My Projects</title>
+
+</head>
+
+
+<body>
+
+
+ <!--
+        =====================================================
+        PROJECT SECTION
+        =====================================================
+
+        The Bootstrap "container" class creates a centered
+        responsive area for the project content.
+
+        "py-5" adds padding to the top and bottom.
+    -->
+ <section id="projects" class="container py-5">
+
+
+  <!--
+            Section heading
+
+            "text-warning" is a Bootstrap class that gives
+            the heading Bootstrap's yellow/warning color.
+
+            "text-center" centers the heading.
+        -->
+  <h1 class="text-warning text-center project-title">
+   My Latest Projects
+  </h1>
+
+
+  <!--
+            Short introduction below the heading.
+        -->
+  <p class="text-center text-light mb-5">
+   A few projects I have created while learning web development.
+  </p>
+
+
+  <!--
+            =================================================
+            BOOTSTRAP ROW
+            =================================================
+
+            Bootstrap uses a 12-column grid.
+
+            The project cards will be placed inside
+            this row.
+        -->
+  <div class="row">
+
+
+   <!--
+                =================================================
+                PROJECT 1
+                =================================================
+
+                col-lg-4 means that on large screens,
+                this column takes 4 out of 12 columns.
+
+                Therefore, three cards can fit in one row:
+
+                4 + 4 + 4 = 12
+
+                col-md-6 means that on medium screens,
+                two cards can fit in one row.
+
+                mb-4 adds bottom margin.
+            -->
+   <div class="col-md-6 col-lg-4 mb-4">
+
+
+    <!--
+                    Bootstrap card component.
+
+                    The card provides a ready-made structure
+                    for displaying an image, title, description
+                    and button.
+                -->
+    <div class="card project-card h-100">
+
+
+     <!--
+                        Project image.
+
+                        "card-img-top" is a Bootstrap class
+                        designed for an image at the top of
+                        a card.
+
+                        "img-fluid" makes the image responsive.
+                    -->
+     <img src="img.avif" class="card-img-top img-fluid project-image" alt="Weather application">
+
+
+     <!--
+                        card-body contains the main text
+                        and controls of the card.
+                    -->
+     <div class="card-body">
+
+
+      <!-- Project title -->
+      <h5 class="card-title">
+       Weather Dashboard
+      </h5>
+
+
+      <!-- Project description -->
+      <p class="card-text">
+       A simple weather dashboard that displays
+       useful weather information in an easy-to-read
+       interface.
+      </p>
+
+
+      <!--
+                            Bootstrap warning button.
+
+                            "btn" creates the basic Bootstrap button.
+
+                            "btn-warning" gives it the warning color.
+                        -->
+      <a href="#" class="btn btn-warning">
+       View Project
+      </a>
+
+     </div>
+
+    </div>
+
+   </div>
+
+
+   <!--
+                =================================================
+                PROJECT 2
+                =================================================
+            -->
+   <div class="col-md-6 col-lg-4 mb-4">
+
+    <div class="card project-card h-100">
+
+     <img src="img.avif" class="card-img-top img-fluid project-image" alt="Task management application">
+
+     <div class="card-body">
+
+      <h5 class="card-title">
+       Task Manager
+      </h5>
+
+      <p class="card-text">
+       A task management application designed
+       to help users organize their daily
+       activities and track their progress.
+      </p>
+
+      <a href="#" class="btn btn-warning">
+       View Project
+      </a>
+
+     </div>
+
+    </div>
+
+   </div>
+
+
+   <!--
+                =================================================
+                PROJECT 3
+                =================================================
+            -->
+   <div class="col-md-6 col-lg-4 mb-4">
+
+    <div class="card project-card h-100">
+
+     <img src="img.avif" class="card-img-top img-fluid project-image" alt="Recipe website">
+
+     <div class="card-body">
+
+      <h5 class="card-title">
+       Recipe Finder
+      </h5>
+
+      <p class="card-text">
+       A recipe website where users can explore
+       different dishes and discover new
+       cooking ideas.
+      </p>
+
+      <a href="#" class="btn btn-warning">
+       View Project
+      </a>
+
+     </div>
+
+    </div>
+
+   </div>
+
+
+   <!--
+                =================================================
+                PROJECT 4
+                =================================================
+
+                This card demonstrates that additional cards
+                can easily be added to the same Bootstrap row.
+            -->
+   <div class="col-md-6 col-lg-4 mb-4">
+
+    <div class="card project-card h-100">
+
+     <img src="img.avif" class="card-img-top img-fluid project-image" alt="Portfolio website">
+
+     <div class="card-body">
+
+      <h5 class="card-title">
+       Personal Portfolio
+      </h5>
+
+      <p class="card-text">
+       A personal portfolio website that presents
+       skills, projects and information about
+       a web developer.
+      </p>
+
+      <a href="#" class="btn btn-warning">
+       View Project
+      </a>
+
+     </div>
+
+    </div>
+
+   </div>
+
+
+  </div>
+
+ </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+/* 
+    Apply a font to the complete webpage.
+
+    Open Sans is loaded from Google Fonts in the HTML file.
+*/
+body {
+ font-family: "Open Sans", sans-serif;
+
+ /* Dark background outside the calculator */
+ background-color: black;
+
+ /* Remove the default browser margin */
+ margin: 0;
+}
+
+
+/*
+    Outer container of the calculator.
+
+    It provides a large area around the calculator
+    and displays a background image.
+*/
+#container {
+ width: 1000px;
+ height: 550px;
+
+ /*
+        A semi-transparent dark layer is placed over
+        the background image.
+
+        This makes the calculator easier to see.
+    */
+ background-image:
+  linear-gradient(rgba(0, 0, 0, 0.3),
+   rgba(0, 0, 0, 0.3)),
+  url("bgImg.jpg");
+
+ /* Center the container horizontally */
+ margin: 20px auto;
+
+ /*
+        Prevents the calculator from becoming difficult
+        to position inside the container.
+    */
+ position: relative;
+}
+
+
+/*
+    Main calculator body.
+*/
+#calculator {
+ width: 320px;
+ height: 520px;
+
+ /* Light calculator background */
+ background-color: #eaedef;
+
+ /*
+        auto centers the calculator horizontally
+        inside the container.
+    */
+ margin: 0 auto;
+
+ /*
+        Allows us to move the calculator slightly
+        from the top.
+    */
+ position: relative;
+ top: 15px;
+
+ /* Rounded corners */
+ border-radius: 8px;
+
+ /*
+        Adds depth around the calculator.
+    */
+ box-shadow:
+  4px 8px 6px rgba(0, 0, 0, 0.2),
+  6px 20px 6px rgba(0, 0, 0, 0.19);
+}
+
+
+/*
+    Complete display area.
+
+    It contains the history and output sections.
+*/
+#result {
+ height: 120px;
+}
+
+
+/*
+    Shows the calculation history.
+
+    Example:
+
+    25 + 10
+*/
+#history {
+ text-align: right;
+
+ height: 20px;
+
+ /*
+        Gives space between the history
+        and calculator edges.
+    */
+ margin: 0 20px;
+
+ padding-top: 20px;
+
+ font-size: 15px;
+
+ color: #777;
+}
+
+
+/*
+    Shows the current number or final result.
+
+    Example:
+
+    35
+*/
+#output {
+ text-align: right;
+
+ height: 60px;
+
+ margin: 10px 20px;
+
+ font-size: 30px;
+
+ /*
+        Prevent very long numbers from breaking
+        the calculator layout.
+    */
+ overflow: hidden;
+}
+
+
+/*
+    Keyboard area containing all buttons.
+*/
+#keyboard {
+ height: 400px;
+}
+
+
+/*
+    Common styling for:
+
+    .operator = +, -, *, /, %, C, CE, =
+    .number   = 0 to 9
+    .empty    = blank spaces
+*/
+.operator,
+.number,
+.empty {
+ width: 50px;
+ height: 50px;
+
+ margin: 15px;
+
+ /*
+        Places buttons next to each other.
+    */
+ float: left;
+
+ /*
+        Makes the buttons circular.
+    */
+ border-radius: 50%;
+
+ /* Removes default button border */
+ border-width: 0;
+
+ font-weight: bold;
+ font-size: 15px;
+}
+
+
+/*
+    Number buttons and empty buttons
+    have the same light background as
+    the calculator.
+*/
+.number,
+.empty {
+ background-color: #eaedef;
+}
+
+
+/*
+    Operators and numbers should look
+    clickable when the mouse moves over them.
+*/
+.number,
+.operator {
+ cursor: pointer;
+}
+
+
+/*
+    When a button is clicked, slightly
+    reduce its font size to give a
+    pressed-button effect.
+*/
+.operator:active,
+.number:active {
+ font-size: 13px;
+}
+
+
+/*
+    Removes the default focus outline
+    from buttons.
+*/
+.operator:focus,
+.number:focus,
+.empty:focus {
+ outline: 0;
+}
+
+
+/*
+    Different colours for the four
+    mathematical operators.
+
+    nth-child() selects buttons based
+    on their position inside #keyboard.
+*/
+
+/* Division */
+button:nth-child(4) {
+ font-size: 20px;
+ background-color: #2eb2aa;
+}
+
+
+/* Multiplication */
+button:nth-child(8) {
+ font-size: 20px;
+ background-color: #ffa500;
+}
+
+
+/* Subtraction */
+button:nth-child(12) {
+ font-size: 20px;
+ background-color: #f08080;
+}
+
+
+/* Addition */
+button:nth-child(16) {
+ font-size: 20px;
+ background-color: #7d93e0;
+}
+
+
+/* Equal button */
+button:nth-child(20) {
+ font-size: 20px;
+ background-color: #9477af;
+}
+
+
+/*
+    Make the C and CE buttons visually different
+    because they perform control operations.
+*/
+#clear,
+#backspace {
+ background-color: #d6d9dc;
+}
+
+
+/*
+    Highlight the output text so that the
+    current number is easy to read.
+*/
+#output-value {
+ margin: 0;
+ font-weight: 700;
+}

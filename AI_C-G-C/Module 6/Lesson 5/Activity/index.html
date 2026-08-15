@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ <!--
+        UTF-8 allows the browser to correctly understand
+        letters, numbers and special symbols.
+    -->
+ <meta charset="UTF-8">
+
+ <!--
+        Makes the calculator adapt to different screen sizes.
+    -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!--
+        Importing a Google Font.
+        This font will be used throughout the calculator.
+    -->
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+ <!--
+        Connect our external CSS file.
+        All visual decoration will be written there.
+    -->
+ <link rel="stylesheet" href="style.css">
+
+ <title>My Calculator</title>
+
+</head>
+
+<body>
+
+ <!--
+        The page wrapper contains the complete calculator.
+        Flexbox in CSS will be used to center this element.
+    -->
+ <div class="page">
+
+  <!-- Main calculator -->
+  <div class="calculator">
+
+   <!--
+                Display section.
+
+                The history area can later show the previous
+                calculation, while the output area can show
+                the current number or answer.
+            -->
+   <div class="display">
+
+    <div class="history">
+     <span id="history-value"></span>
+    </div>
+
+    <div class="output">
+     <span id="output-value">0</span>
+    </div>
+
+   </div>
+
+
+   <!--
+                Keyboard section.
+
+                All buttons are placed here.
+            -->
+   <div class="keyboard">
+
+    <!-- First row -->
+    <button class="operator" id="clear">C</button>
+    <button class="operator" id="delete">⌫</button>
+    <button class="operator" id="percent">%</button>
+    <button class="operator divide" id="divide">÷</button>
+
+    <!-- Second row -->
+    <button class="number" id="seven">7</button>
+    <button class="number" id="eight">8</button>
+    <button class="number" id="nine">9</button>
+    <button class="operator multiply" id="multiply">×</button>
+
+    <!-- Third row -->
+    <button class="number" id="four">4</button>
+    <button class="number" id="five">5</button>
+    <button class="number" id="six">6</button>
+    <button class="operator subtract" id="subtract">−</button>
+
+    <!-- Fourth row -->
+    <button class="number" id="one">1</button>
+    <button class="number" id="two">2</button>
+    <button class="number" id="three">3</button>
+    <button class="operator add" id="add">+</button>
+
+    <!-- Fifth row -->
+    <button class="empty"></button>
+    <button class="number" id="zero">0</button>
+    <button class="empty"></button>
+    <button class="operator equals" id="equals">=</button>
+
+   </div>
+
+  </div>
+
+ </div>
+
+</body>
+
+</html>

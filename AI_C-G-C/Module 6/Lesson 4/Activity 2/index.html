@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ <!--
+        UTF-8 allows the webpage to display normal text,
+        numbers and special symbols correctly.
+    -->
+ <meta charset="UTF-8">
+
+ <!--
+        Makes the calculator responsive on different
+        screen sizes such as phones, tablets and computers.
+    -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!--
+        Google Font:
+        This imports the Poppins font so that our calculator
+        has a cleaner and more modern appearance.
+    -->
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+ <!--
+        Our external CSS file contains all the decoration
+        and layout rules for the calculator.
+    -->
+ <link rel="stylesheet" href="style.css">
+
+ <!--
+        Text shown on the browser tab.
+    -->
+ <title>My Calculator</title>
+
+</head>
+
+<body>
+
+ <!--
+        Outer wrapper for the calculator.
+
+        It helps us place the calculator in the center
+        of the webpage.
+    -->
+ <div class="page">
+
+  <!--
+            Main calculator container.
+
+            This element represents the calculator body.
+        -->
+  <div class="calculator">
+
+   <!--
+                Display area.
+
+                It contains two sections:
+                1. History - can show previous calculations.
+                2. Output - can show the current number/result.
+
+                There is no JavaScript yet, so these areas
+                are empty for now.
+            -->
+   <div class="display">
+
+    <div class="history">
+     <span id="history-value"></span>
+    </div>
+
+    <div class="output">
+     <span id="output-value">0</span>
+    </div>
+
+   </div>
+
+
+   <!--
+                Keyboard area.
+
+                All calculator buttons are placed inside
+                this section.
+            -->
+   <div class="keyboard">
+
+    <!--
+                    Operator buttons are given the class
+                    "operator".
+
+                    The class allows CSS to style all
+                    mathematical/control buttons together.
+                -->
+    <button class="operator" id="clear">C</button>
+    <button class="operator" id="delete">⌫</button>
+    <button class="operator" id="percent">%</button>
+    <button class="operator" id="divide">÷</button>
+
+
+    <!-- Number buttons -->
+    <button class="number" id="seven">7</button>
+    <button class="number" id="eight">8</button>
+    <button class="number" id="nine">9</button>
+
+    <button class="operator" id="multiply">×</button>
+
+
+    <button class="number" id="four">4</button>
+    <button class="number" id="five">5</button>
+    <button class="number" id="six">6</button>
+
+    <button class="operator" id="subtract">−</button>
+
+
+    <button class="number" id="one">1</button>
+    <button class="number" id="two">2</button>
+    <button class="number" id="three">3</button>
+
+    <button class="operator" id="add">+</button>
+
+
+    <!--
+                    Empty spaces are used to maintain the
+                    calculator's grid structure.
+                -->
+    <button class="empty"></button>
+
+    <button class="number" id="zero">0</button>
+
+    <button class="empty"></button>
+
+    <!-- Equal button -->
+    <button class="operator equals" id="equals">=</button>
+
+   </div>
+
+  </div>
+
+ </div>
+
+</body>
+
+</html>

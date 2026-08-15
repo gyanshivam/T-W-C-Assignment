@@ -1,0 +1,69 @@
+/* Apply the Google Font to the complete webpage */
+body {
+ margin: 0;
+ font-family: "Roboto Slab", serif;
+ background: #f4f4f4;
+}
+
+
+/* Footer container
+
+   The footer stretches across the complete width
+   of the webpage. */
+.page-footer {
+ width: 100%;
+ background-color: #252525;
+ color: #bdbdbd;
+}
+
+
+/* Font Awesome code icon
+
+   The icon is given a different color and size
+   so that it becomes a small visual element
+   above the footer text. */
+.footer-icon {
+ font-size: 24px;
+ color: #ffc107;
+}
+
+
+/* Footer heading
+
+   This controls the appearance of the main
+   text displayed inside the footer. */
+.footer-title {
+ color: #ffffff;
+ font-size: 18px;
+ font-weight: 700;
+ margin-bottom: 8px;
+}
+
+
+/* Footer paragraph
+
+   Creates a softer, smaller copyright message. */
+.page-footer p {
+ font-size: 13px;
+ color: #999999;
+}
+
+
+/* Footer link
+
+   This is the clickable text at the bottom
+   of the footer. */
+.footer-link {
+ color: #ffc107;
+ text-decoration: none;
+ font-size: 14px;
+ font-weight: 600;
+}
+
+
+/* :hover runs when the mouse pointer moves
+   over the footer link. */
+.footer-link:hover {
+ color: #ffffff;
+ text-decoration: underline;
+}

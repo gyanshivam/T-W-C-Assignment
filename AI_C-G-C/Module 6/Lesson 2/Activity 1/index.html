@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ <!--
+        The charset tells the browser which character encoding
+        the webpage uses.
+
+        UTF-8 supports almost all commonly used characters,
+        symbols and languages.
+    -->
+ <meta charset="UTF-8">
+
+
+ <!--
+        The viewport meta tag makes the webpage responsive.
+
+        width=device-width:
+        The page width will match the device screen.
+
+        initial-scale=1.0:
+        The page starts at normal zoom level.
+    -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+ <!--
+        Bootstrap CSS
+
+        Bootstrap is a CSS framework that provides
+        ready-made classes for layouts, spacing, colors,
+        buttons, responsive design and many other things.
+
+        We can therefore create a responsive layout
+        without writing all the CSS ourselves.
+    -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+ <!--
+        Our own stylesheet.
+
+        Bootstrap provides general styling, while
+        style.css contains the custom design for
+        this particular webpage.
+    -->
+ <link rel="stylesheet" href="style.css">
+
+
+ <!--
+        Google Fonts
+
+        The font is downloaded from Google's font service
+        and can then be used through CSS.
+
+        This gives the website a more customized appearance
+        than relying only on the browser's default font.
+    -->
+ <link
+  href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Roboto+Slab:wght@400;600;700&display=swap"
+  rel="stylesheet">
+
+
+ <title>About Me</title>
+
+</head>
+
+
+<body>
+
+
+ <!--
+        =====================================================
+        ABOUT SECTION
+        =====================================================
+
+        The "container" class is provided by Bootstrap.
+
+        Bootstrap's container:
+        - gives the content a suitable maximum width
+        - adds horizontal spacing
+        - helps create a responsive layout
+
+        "py-5" means:
+        p = padding
+        y = vertical direction
+        5 = Bootstrap's spacing size
+
+        Therefore, py-5 adds padding to the top and bottom.
+    -->
+ <section id="about" class="container about-section py-5">
+
+
+  <!--
+            Bootstrap's "row" creates a horizontal row.
+
+            Columns are placed inside a Bootstrap row.
+        -->
+  <div class="row align-items-center">
+
+
+   <!--
+                =================================================
+                LEFT COLUMN
+                =================================================
+
+                col-md-5 means:
+
+                On medium-sized screens and larger,
+                this column occupies 5 out of 12 Bootstrap columns.
+
+                Bootstrap's grid is based on 12 columns.
+
+                So:
+
+                col-md-5 = 5/12 of the available width
+            -->
+   <div class="col-md-5 text-center mb-4 mb-md-0">
+
+
+    <!--
+                    img-fluid is a Bootstrap class.
+
+                    It makes the image responsive so that
+                    it does not overflow its parent container.
+
+                    The image will automatically adjust
+                    to smaller screen sizes.
+                -->
+    <img src="about_img.avif" class="img-fluid about-image" alt="Illustration representing about section">
+
+   </div>
+
+
+   <!--
+                =================================================
+                RIGHT COLUMN
+                =================================================
+
+                col-md-7 gives this section 7 of the
+                12 Bootstrap columns on medium screens
+                and larger.
+
+                5 + 7 = 12
+
+                On smaller screens, Bootstrap automatically
+                stacks the columns vertically.
+            -->
+   <div class="col-md-7 text-white">
+
+
+    <!--
+                    This small heading introduces the section.
+
+                    "text-warning" is a Bootstrap class that
+                    applies Bootstrap's warning/yellow color.
+                -->
+    <h5 class="text-warning">ABOUT ME</h5>
+
+
+    <!--
+                    Main heading of the About section.
+
+                    "section-heading" is our own CSS class.
+                -->
+    <h1 class="section-heading">
+     Turning Ideas Into Digital Experiences
+    </h1>
+
+
+    <!--
+                    Paragraph element contains the main
+                    descriptive information.
+
+                    <strong> is used to give important words
+                    stronger emphasis.
+                -->
+    <p>
+     I enjoy learning about technology and creating
+     websites that are simple, useful and easy to
+     understand. My goal is to continuously improve
+     my programming skills and turn creative ideas
+     into working projects.
+    </p>
+
+
+    <!--
+                    Another paragraph gives additional information
+                    about the person or website owner.
+                -->
+    <p>
+     Web development combines creativity with
+     logical thinking. Every project gives me an
+     opportunity to learn something new and become
+     a better developer.
+    </p>
+
+
+    <!--
+                    Bootstrap button class:
+
+                    btn
+                    = tells Bootstrap that this is a button.
+
+                    btn-outline-warning
+                    = creates a button with a warning-colored
+                      outline instead of a solid background.
+                -->
+    <button class="btn btn-outline-warning learn-btn">
+     Learn More
+    </button>
+
+   </div>
+
+  </div>
+
+ </section>
+
+
+</body>
+
+</html>

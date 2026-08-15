@@ -1,0 +1,251 @@
+/*
+    =========================================================
+    BODY
+    =========================================================
+
+    The body contains all visible webpage content.
+
+    We give it a gradient background instead of using
+    a plain background color.
+*/
+
+body {
+
+ /*
+        linear-gradient() creates a smooth transition
+        between two or more colors.
+
+        135deg means that the gradient travels diagonally.
+    */
+ background: linear-gradient(135deg,
+   #283c86,
+   #45a247);
+
+
+ /*
+        Use the Google "Nunito" font that was loaded
+        in the HTML document.
+
+        sans-serif is the fallback font.
+
+        If Nunito cannot be loaded, the browser will
+        use another sans-serif font.
+    */
+ font-family: "Nunito", sans-serif;
+
+}
+
+
+/*
+    =========================================================
+    ABOUT SECTION
+    =========================================================
+*/
+
+.about-section {
+
+ /*
+        A semi-transparent white background.
+
+        rgba() uses:
+
+        Red   = 255
+        Green = 255
+        Blue  = 255
+        Alpha = 0.12
+
+        The alpha value controls transparency.
+
+        0 = completely transparent
+        1 = completely opaque
+
+        Therefore, 0.12 creates a subtle transparent layer.
+    */
+ background-color: rgba(255, 255, 255, 0.12);
+
+
+ /*
+        Creates rounded corners around the About section.
+    */
+ border-radius: 20px;
+
+
+ /*
+        Adds space between the top of the page
+        and the About section.
+    */
+ margin-top: 60px;
+
+
+ /*
+        Adds a shadow around the section.
+
+        This creates depth and separates the section
+        visually from the background.
+    */
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/*
+    =========================================================
+    ABOUT IMAGE
+    =========================================================
+*/
+
+.about-image {
+
+ /*
+        Limits the maximum width of the image.
+
+        Even if the original image is very large,
+        it will not become wider than 320 pixels.
+    */
+ max-width: 320px;
+
+
+ /*
+        Adds a small shadow around the illustration.
+    */
+ filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.25));
+
+}
+
+
+/*
+    =========================================================
+    MAIN ABOUT HEADING
+    =========================================================
+*/
+
+.section-heading {
+
+ /*
+        Uses the second Google Font loaded in HTML.
+
+        Roboto Slab is a serif font and makes the
+        main heading visually different from the body text.
+    */
+ font-family: "Roboto Slab", serif;
+
+
+ /*
+        Makes the heading larger.
+    */
+ font-size: 2.4rem;
+
+
+ /*
+        700 represents a bold font weight.
+    */
+ font-weight: 700;
+
+
+ /*
+        Adds space above and below the heading.
+    */
+ margin: 12px 0 20px;
+
+}
+
+
+/*
+    =========================================================
+    ABOUT PARAGRAPHS
+    =========================================================
+*/
+
+.about-section p {
+
+ /*
+        Makes the paragraph text easier to read.
+    */
+ font-size: 1rem;
+
+
+ /*
+        Controls the vertical spacing between lines.
+    */
+ line-height: 1.8;
+
+
+ /*
+        Gives some space below each paragraph.
+    */
+ margin-bottom: 18px;
+
+}
+
+
+/*
+    =========================================================
+    LEARN MORE BUTTON
+    =========================================================
+*/
+
+.learn-btn {
+
+ /*
+        Makes the border slightly thicker.
+    */
+ border-width: 2px;
+
+
+ /*
+        Makes the button text bold.
+    */
+ font-weight: 700;
+
+
+ /*
+        Adds horizontal and vertical space
+        inside the button.
+    */
+ padding: 9px 28px;
+
+
+ /*
+        Creates a smooth animation when the button
+        changes during hover.
+    */
+ transition: all 0.3s ease;
+
+}
+
+
+/*
+    =========================================================
+    BUTTON HOVER EFFECT
+    =========================================================
+
+    :hover is a CSS pseudo-class.
+
+    These rules are applied when the mouse pointer
+    is placed over the button.
+*/
+
+.learn-btn:hover {
+
+ /*
+        Changes the button from an outlined button
+        to a filled yellow button.
+    */
+ background-color: #ffc107;
+
+
+ /*
+        Changes the text color to dark.
+    */
+ color: #222;
+
+
+ /*
+        Slightly enlarges the button when the user
+        moves the mouse over it.
+
+        1.04 means 104% of the original size.
+    */
+ transform: scale(1.04);
+
+}

@@ -1,0 +1,337 @@
+/*
+    =========================================================
+    GENERAL PAGE STYLING
+    =========================================================
+*/
+
+body {
+
+ /*
+        Removes the browser's default margin.
+    */
+ margin: 0;
+
+
+ /*
+        Uses the Google Font loaded in the HTML file.
+
+        sans-serif is used as a fallback.
+    */
+ font-family: "Nunito", sans-serif;
+
+
+ /*
+        Dark page background.
+    */
+ background: #20242b;
+
+}
+
+
+/*
+    =========================================================
+    SOCIAL MEDIA SECTION
+    =========================================================
+*/
+
+.social-section {
+
+ /*
+        Gives the complete social media area
+        a dark blue background.
+    */
+ background: #252b45;
+
+
+ /*
+        Adds some space between this section and
+        other content if another section is added later.
+    */
+ margin-top: 50px;
+
+}
+
+
+/*
+    =========================================================
+    SECTION LABEL
+    =========================================================
+*/
+
+.section-label {
+
+ /*
+        Makes the small heading bold.
+    */
+ font-weight: 700;
+
+
+ /*
+        Adds some spacing between the letters.
+
+        This is commonly used for small uppercase labels.
+    */
+ letter-spacing: 2px;
+
+}
+
+
+/*
+    =========================================================
+    MAIN HEADING
+    =========================================================
+*/
+
+.social-heading {
+
+ /*
+        Makes the main heading bold.
+    */
+ font-weight: 800;
+
+
+ /*
+        Gives the heading a larger size.
+    */
+ font-size: 2.5rem;
+
+
+ /*
+        Removes excessive default spacing.
+    */
+ margin: 8px 0 12px;
+
+}
+
+
+/*
+    =========================================================
+    INTRODUCTORY TEXT
+    =========================================================
+*/
+
+.intro-text {
+
+ /*
+        Limits the width of the paragraph so that
+        it remains easy to read.
+    */
+ max-width: 600px;
+
+
+ /*
+        Increases line spacing.
+    */
+ line-height: 1.6;
+
+}
+
+
+/*
+    =========================================================
+    SOCIAL MEDIA CARD
+    =========================================================
+
+    Each social link is designed to look like a
+    small clickable card.
+*/
+
+.social-card {
+
+ /*
+        Makes the link fill the available column width.
+    */
+ display: flex;
+
+
+ /*
+        Aligns the name and icon vertically.
+    */
+ align-items: center;
+
+
+ /*
+        Creates space between the text and icon.
+    */
+ justify-content: space-between;
+
+
+ /*
+        Adds space inside the card.
+    */
+ padding: 18px 22px;
+
+
+ /*
+        Yellow border around the card.
+    */
+ border: 2px solid #ffc107;
+
+
+ /*
+        Slightly rounds the corners.
+    */
+ border-radius: 8px;
+
+
+ /*
+        Removes the normal underline from an anchor.
+    */
+ text-decoration: none;
+
+
+ /*
+        Makes the text white.
+    */
+ color: white;
+
+
+ /*
+        Makes the text slightly bold.
+    */
+ font-weight: 700;
+
+
+ /*
+        Smoothly animates changes such as background,
+        color and movement.
+    */
+ transition: all 0.3s ease;
+
+}
+
+
+/*
+    =========================================================
+    SOCIAL ICON
+    =========================================================
+*/
+
+.social-card i {
+
+ /*
+        Makes the icon larger than normal text.
+    */
+ font-size: 24px;
+
+
+ /*
+        Gives the icon the Bootstrap-style warning color.
+    */
+ color: #ffc107;
+
+}
+
+
+/*
+    =========================================================
+    HOVER EFFECT
+    =========================================================
+
+    :hover means these styles are applied when
+    the mouse pointer is placed over the card.
+*/
+
+.social-card:hover {
+
+ /*
+        Fills the card with yellow when hovered.
+    */
+ background: #ffc107;
+
+
+ /*
+        Changes the text to a dark color so that
+        it remains readable on the yellow background.
+    */
+ color: #20242b;
+
+
+ /*
+        Removes the default link underline.
+    */
+ text-decoration: none;
+
+
+ /*
+        Moves the card slightly upward.
+    */
+ transform: translateY(-5px);
+
+}
+
+
+/*
+    =========================================================
+    ICON HOVER
+    =========================================================
+
+    The icon also changes when the card is hovered.
+*/
+
+.social-card:hover i {
+
+ /*
+        Makes the icon dark against the yellow background.
+    */
+ color: #20242b;
+
+}
+
+
+/*
+    =========================================================
+    EMAIL CARD
+    =========================================================
+
+    We give the email option a slightly different
+    appearance to distinguish it from the other cards.
+*/
+
+.email-card {
+
+ /*
+        Starts with a yellow background.
+    */
+ background: #ffc107;
+
+
+ /*
+        Dark text contrasts with the yellow background.
+    */
+ color: #20242b;
+
+}
+
+
+/*
+    Email icon starts dark because its card
+    already has a yellow background.
+*/
+
+.email-card i {
+
+ color: #20242b;
+
+}
+
+
+/*
+    When the email card is hovered, change it
+    back to the normal dark appearance.
+*/
+
+.email-card:hover {
+
+ background: transparent;
+
+ color: white;
+
+}
+
+
+.email-card:hover i {
+
+ color: #ffc107;
+
+}

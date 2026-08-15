@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ <!--
+        The meta charset tag tells the browser which character
+        encoding should be used.
+
+        UTF-8 supports normal English characters as well as
+        many special characters and symbols.
+    -->
+ <meta charset="UTF-8">
+
+ <!--
+        This makes the webpage responsive.
+
+        width=device-width means the page width should match
+        the device screen width.
+
+        initial-scale=1.0 means the page starts at normal zoom.
+    -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!--
+        The title appears on the browser tab.
+    -->
+ <title>My Calculator</title>
+
+</head>
+
+<body>
+
+ <!--
+        This is the outermost container of our calculator.
+
+        A <div> is a block-level HTML element commonly used
+        to group related elements together.
+
+        At this stage, it simply provides a parent structure
+        for the calculator.
+    -->
+ <div id="calculator-box">
+
+  <!--
+            This div represents the actual calculator.
+
+            Keeping a separate calculator container makes it
+            easier to style the calculator later using CSS.
+        -->
+  <div id="calculator">
+
+   <!--
+                This section represents the calculator display.
+
+                It is empty for now because this activity is
+                only about creating the structure.
+
+                JavaScript can later be used to show numbers
+                and calculation results here.
+            -->
+   <div id="display"></div>
+
+
+   <!--
+                The buttons are grouped inside this div.
+
+                The div acts as a keyboard area for the calculator.
+            -->
+   <div id="buttons">
+
+    <!--
+                    Control buttons.
+
+                    The class "action" can later be used by CSS
+                    or JavaScript to identify special buttons.
+                -->
+    <button class="action" id="clear-button">Clear</button>
+    <button class="action" id="delete-button">Delete</button>
+    <button class="action" id="percent-button">%</button>
+    <button class="action" id="divide-button">÷</button>
+
+
+    <!--
+                    Number buttons.
+
+                    The "digit" class groups buttons that represent
+                    numbers entered into the calculator.
+                -->
+    <button class="digit" id="seven">7</button>
+    <button class="digit" id="eight">8</button>
+    <button class="digit" id="nine">9</button>
+
+    <!-- Multiplication operator -->
+    <button class="action" id="multiply-button">×</button>
+
+
+    <!-- Second row of numbers -->
+    <button class="digit" id="four">4</button>
+    <button class="digit" id="five">5</button>
+    <button class="digit" id="six">6</button>
+
+    <!-- Subtraction operator -->
+    <button class="action" id="subtract-button">−</button>
+
+
+    <!-- Third row of numbers -->
+    <button class="digit" id="one">1</button>
+    <button class="digit" id="two">2</button>
+    <button class="digit" id="three">3</button>
+
+    <!-- Addition operator -->
+    <button class="action" id="add-button">+</button>
+
+
+    <!--
+                    Empty spaces are included to maintain the
+                    future calculator button layout.
+
+                    These buttons don't contain any text and
+                    currently have no functionality.
+                -->
+    <button class="space" id="space-one"></button>
+
+    <!-- Zero button -->
+    <button class="digit" id="zero">0</button>
+
+    <button class="space" id="space-two"></button>
+
+
+    <!--
+                    Equal button.
+
+                    Later, JavaScript can use this button to
+                    calculate and display the final answer.
+                -->
+    <button class="action" id="equals-button">=</button>
+
+   </div>
+
+  </div>
+
+ </div>
+
+</body>
+
+</html>
