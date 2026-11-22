@@ -1,25 +1,42 @@
-# 01-set-and-zero.py
-# Topic: Setting bits with OR, clearing bits with AND, power-of-2 check
+# 10-binary-basics.py
+# Topic: decimal -> binary, then the AND and OR bitwise operators
 
-input("SET a bit: OR forces a bit ON.  Press Enter ")
-start = 9
-add = 4
-print("  start  ", start, "->", bin(start)[2:])
-print("  OR ", add, " ->", start | add, "->", bin(start | add)[2:])
+print("Three steps, one per section.  You pick the number(s) for each step.")
+print("  1) Convert a decimal number to binary.")
+print("  2) AND  - the result has a 1 only where BOTH inputs have a 1.")
+print("  3) OR   - the result has a 1 where EITHER input has a 1.")
+print("--------------------")
 
-input("ZERO a bit: AND forces a bit OFF.  Press Enter ")
-now = 13
-mask = 9
-print("  start  ", now, "->", bin(now)[2:])
-print("  AND", mask, " ->", now & mask, "->", bin(now & mask)[2:])
+# ---------- Section 1 : decimal -> binary ----------
+print("1) Decimal to binary - bin(n)[2:] drops the '0b' prefix and shows the bits.")
+n = int(input("   Pick a number to convert (try 5 or 12): "))
+guess = input("   Your guess - what is " + str(n) + " in binary? ")
+input("   Press Enter to convert " + str(n) + " to binary ")
+print("      decimal", n, "->  binary", bin(n)[2:])
+print("      your guess:", guess)
 
-n = int(input("Pick a number (4 and 6 give different answers): "))
-guess = input("Your guess - power of 2? (yes/no): ")
-input("Check the pattern: a power of 2 has exactly one bit ON.  Press Enter ")
+print("--------------------")
 
-if n > 0 and (n & (n - 1)) == 0:
-    verdict = "power of 2"
-else:
-    verdict = "not a power of 2"
+# ---------- Section 2 : AND ----------
+print("2) AND - both bits must be 1:  1 & 1 = 1,  otherwise 0.")
+a = int(input("   First number  (try 12): "))
+b = int(input("   Second number (try 10): "))
+input("   Press Enter to AND " + str(a) + " with " + str(b) + " bit by bit ")
+print("      a     =", a, "->", bin(a)[2:])
+print("      b     =", b, "->", bin(b)[2:])
+print("      a & b =", a & b, "->", bin(a & b)[2:],
+      "  (a 1 only where both a and b had a 1)")
 
-print("  ", n, "->", bin(n)[2:], "->", verdict, "| your guess:", guess)
+print("--------------------")
+
+# ---------- Section 3 : OR ----------
+print("3) OR - at least one bit must be 1:  1 | 1 = 1,  1 | 0 = 1,  0 | 0 = 0.")
+c = int(input("   First number  (try 12): "))
+d = int(input("   Second number (try 10): "))
+input("   Press Enter to OR " + str(c) + " with " + str(d) + " bit by bit ")
+print("      c     =", c, "->", bin(c)[2:])
+print("      d     =", d, "->", bin(d)[2:])
+print("      c | d =", c | d, "->", bin(c | d)[2:],
+      "  (a 1 wherever either c or d had a 1)")
+
+print("--------------------")
